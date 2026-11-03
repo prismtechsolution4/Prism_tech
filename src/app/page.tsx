@@ -4,7 +4,7 @@ import { useSpotlight } from "@/lib/useSpotlight";
 import Preloader from "@/components/Preloader";
 import ProgressBar from "@/components/ProgressBar";
 import CustomCursor from "@/components/CustomCursor";
-import InteractiveBackground from "@/components/InteractiveBackground";
+import ThreeCanvas from "@/components/ThreeCanvas";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import WhyIntechtive from "@/components/WhyIntechtive";
@@ -34,8 +34,8 @@ export default function Home() {
       {/* Subtle fine pointer cursor follower */}
       <CustomCursor />
 
-      {/* Dynamic interactive particle constellation background */}
-      <InteractiveBackground />
+      {/* 3D WebGL Multi-stage Canvas (Hero globe, Services planetary network, Security radar, Contact knot) */}
+      <ThreeCanvas />
 
       {/* 2. Sticky Navbar */}
       <Navbar />
