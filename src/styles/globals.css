@@ -102,11 +102,42 @@
   opacity: 1;
 }
 
+/* Keyframe animations */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes ping-soft {
+  0% {
+    box-shadow: 0 0 0 0 var(--color-primary-50);
+  }
+  100% {
+    box-shadow: 0 0 0 18px transparent;
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Ticker marquee */
 .marquee-track {
   width: max-content;
-  animation: marquee 38s linear infinite;
   display: flex;
+  will-change: transform;
+  animation: marquee 38s linear infinite;
 }
 
 .marquee:hover .marquee-track {
