@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 280" width="280" height="280">
+  <defs>
+    <filter id="neon-glow-icon" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="blur1" />
+      <feMerge>
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <linearGradient id="p-stem-front-i" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9bf560" />
+      <stop offset="60%" stop-color="#7ed33f" />
+      <stop offset="100%" stop-color="#3c8a14" />
+    </linearGradient>
+    <linearGradient id="p-stem-side-i" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1b4520" />
+      <stop offset="100%" stop-color="#0a1c0d" />
+    </linearGradient>
+    <linearGradient id="p-stem-top-i" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b6ff85" />
+      <stop offset="100%" stop-color="#d9ffba" />
+    </linearGradient>
+    <linearGradient id="p-loop-top-i" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7ed33f" />
+      <stop offset="50%" stop-color="#3fe2d3" />
+      <stop offset="100%" stop-color="#22e5ff" />
+    </linearGradient>
+    <linearGradient id="p-loop-side-i" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#146654" />
+      <stop offset="100%" stop-color="#06222c" />
+    </linearGradient>
+    <linearGradient id="t-bar-top-i" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#35f0ff" />
+      <stop offset="60%" stop-color="#22e5ff" />
+      <stop offset="100%" stop-color="#7ed33f" />
+    </linearGradient>
+    <linearGradient id="t-bar-front-i" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1bc2db" />
+      <stop offset="100%" stop-color="#0b5f6e" />
+    </linearGradient>
+    <linearGradient id="t-stem-front-i" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22e5ff" />
+      <stop offset="60%" stop-color="#139db0" />
+      <stop offset="100%" stop-color="#07444d" />
+    </linearGradient>
+    <linearGradient id="t-stem-side-i" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0b3038" />
+      <stop offset="100%" stop-color="#041217" />
+    </linearGradient>
+    <linearGradient id="prism-glass-glow-i" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+      <stop offset="25%" stop-color="#22e5ff" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#7ed33f" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(10, 20)">
+    <!-- Back Glow -->
+    <circle cx="110" cy="120" r="75" fill="#7ed33f" opacity="0.15" filter="url(#neon-glow-icon)" />
+    <circle cx="160" cy="90" r="65" fill="#22e5ff" opacity="0.18" filter="url(#neon-glow-icon)" />
+
+    <!-- 'P' Pillar -->
+    <polygon points="50,75 78,60 78,205 50,220" fill="url(#p-stem-front-i)" />
+    <polygon points="26,88 50,75 50,220 26,206" fill="url(#p-stem-side-i)" />
+    <polygon points="50,75 78,60 54,48 26,62" fill="url(#p-stem-top-i)" />
+
+    <!-- 'P' Loop -->
+    <polygon points="78,60 148,22 174,36 104,74" fill="url(#p-loop-top-i)" />
+    <polygon points="148,22 174,36 174,124 148,110" fill="url(#t-bar-top-i)" />
+    <polygon points="78,146 148,110 174,124 104,162" fill="url(#p-stem-front-i)" />
+    <polygon points="78,92 120,68 120,102 78,124" fill="url(#p-loop-side-i)" />
+
+    <!-- 'T' Structure -->
+    <polygon points="120,50 220,0 248,15 148,65" fill="url(#t-bar-top-i)" />
+    <polygon points="148,65 248,15 248,38 148,88" fill="url(#t-bar-front-i)" />
+    <polygon points="120,50 148,65 148,88 120,72" fill="url(#t-stem-side-i)" />
+    <polygon points="220,0 248,15 248,38 220,22" fill="url(#p-stem-top-i)" />
+
+    <!-- 'T' Stem -->
+    <polygon points="174,75 200,62 200,210 174,224" fill="url(#t-stem-front-i)" />
+    <polygon points="200,62 218,72 218,198 200,210" fill="url(#t-stem-side-i)" />
+    <polygon points="174,224 200,210 218,198 192,212" fill="url(#p-stem-side-i)" />
+
+    <!-- Specular Facets & Highlights -->
+    <polygon points="78,60 104,74 78,88 50,75" fill="url(#prism-glass-glow-i)" opacity="0.85" />
+    <polygon points="148,22 174,36 148,50 120,38" fill="#ffffff" opacity="0.75" />
+
+    <!-- Laser Edges -->
+    <polyline points="26,62 50,75 78,60 148,22 220,0 248,15" fill="none" stroke="#b6ff85" stroke-width="2.2" stroke-linecap="round" />
+    <polyline points="78,60 78,205 50,220 26,206" fill="none" stroke="#7ed33f" stroke-width="1.5" opacity="0.7" />
+    <polyline points="148,65 248,15 248,38" fill="none" stroke="#22e5ff" stroke-width="2" stroke-linecap="round" />
+    <polyline points="174,75 174,224 200,210 218,198" fill="none" stroke="#22e5ff" stroke-width="1.8" stroke-linecap="round" />
+
+    <!-- Core Sparkles -->
+    <circle cx="148" cy="22" r="3.5" fill="#ffffff" />
+    <circle cx="148" cy="22" r="9" fill="#22e5ff" opacity="0.7" filter="url(#neon-glow-icon)" />
+    <circle cx="78" cy="60" r="3" fill="#ffffff" />
+    <circle cx="78" cy="60" r="8" fill="#7ed33f" opacity="0.7" filter="url(#neon-glow-icon)" />
+  </g>
+</svg>
