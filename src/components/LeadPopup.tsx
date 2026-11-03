@@ -110,9 +110,9 @@ export default function LeadPopup({
         <Image
           src="/brand/logo-transparent.png"
           alt="PrismTech Solutions"
-          width={889}
-          height={354}
-          className="h-10 w-auto"
+          width={640}
+          height={160}
+          className="h-9 w-auto"
         />
 
         {status === "sent" ? (

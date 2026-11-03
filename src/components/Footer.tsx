@@ -21,9 +21,9 @@ export default function Footer() {
             <Image
               src="/brand/logo-transparent.png"
               alt="PrismTech Solutions"
-              width={889}
-              height={354}
-              className="h-14 w-auto"
+              width={640}
+              height={160}
+              className="h-12 w-auto"
             />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-muted">
               {company.tagline}

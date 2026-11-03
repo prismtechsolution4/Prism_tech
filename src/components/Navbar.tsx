@@ -41,10 +41,10 @@ export default function Navbar() {
           <Image
             src="/brand/logo-transparent.png"
             alt="PrismTech Solutions"
-            width={889}
-            height={354}
+            width={640}
+            height={160}
             priority
-            className="h-10 w-auto md:h-14"
+            className="h-10 w-auto md:h-12"
           />
         </button>
 

@@ -50,10 +50,10 @@ export default function Preloader() {
       <Image
         src="/brand/logo-transparent.png"
         alt="PrismTech Solutions"
-        width={889}
-        height={354}
+        width={640}
+        height={160}
         priority
-        className="h-20 w-auto"
+        className="h-16 w-auto"
       />
 
       {/* Progress bar container */}
