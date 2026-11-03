@@ -1,0 +1,96 @@
+/**
+ * INTECHTIVE SOLUTIONS — CENTRALIZED DESIGN SYSTEM THEME
+ * 
+ * Single Source of Truth for all Design Tokens:
+ * ---------------------------------------------------------------------------
+ * COLORS:
+ * --color-bg: Primary obsidian page background (#05080a)
+ * --color-bg-elevated: Elevated surface dark obsidian tint (#0b1014)
+ * --color-surface: Surface glass background
+ * --color-surface-hover: Interactive hover surface
+ * --color-border: Default subtle border for glass panels and dividers (white/10)
+ * --color-border-hover: Hover border state highlighting elements
+ * --color-text: Primary readable text ink color (#e8f1ee)
+ * --color-text-muted: Muted / secondary description text color (#8ba19a)
+ * --color-primary: Core brand electric lime-green (#7ed33f)
+ * --color-primary-hover: Brightened brand color for hover states (#8fe34f)
+ * --color-accent: Secondary cyber cyan accent for gradients (#22e5ff)
+ * --color-emerald: Emerald green accent (#22c55e)
+ * --color-glow: Active brand glow color for shadows & pulse rings
+ * --gradient-primary: Linear gradient from brand primary to cyan accent
+ * --gradient-timeline: Vertical gradient for the process timeline indicator
+ * --gradient-divider: Horizontal divider fade gradient
+ * 
+ * TYPOGRAPHY:
+ * --font-sans: Body typeface (Inter)
+ * --font-display: Display / heading typeface (Space Grotesk)
+ * --font-mono: Monospace typeface fallback
+ * 
+ * BORDER RADII:
+ * --radius-card: Card & container rounded corners (16px / 1rem)
+ * --radius-btn: Pill button rounded corners (9999px)
+ * --radius-input: Form field & item rounded corners (12px / 0.75rem)
+ * --radius-thumb: Small thumbnail rounded corners (6px / 0.375rem)
+ * 
+ * SHADOWS:
+ * --shadow-glow: Neon brand glow for active states
+ * --shadow-card: Ambient depth shadow for elevated containers
+ * --shadow-popup: High elevation backdrop shadow
+ */
+
+:root {
+  /* Core Palette */
+  --color-bg: #05080a;
+  --color-bg-elevated: #0b1014;
+  --color-surface: rgba(14, 24, 20, 0.85);
+  --color-surface-glass: linear-gradient(140deg, rgba(14, 24, 20, 0.88), rgba(6, 10, 9, 0.82));
+  --color-surface-hover: rgba(255, 255, 255, 0.08);
+  --color-surface-input: rgba(255, 255, 255, 0.05);
+
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-subtle: rgba(255, 255, 255, 0.06);
+  --color-border-hover: rgba(255, 255, 255, 0.2);
+
+  --color-text: #e8f1ee;
+  --color-text-muted: #8ba19a;
+  --color-text-inverted: #000000;
+
+  /* Brand and Accent Tokens */
+  --color-primary: #7ed33f;
+  --color-primary-hover: #92e854;
+  --color-accent: #22e5ff;
+  --color-emerald: #22c55e;
+
+  /* Dynamic Brand Alpha Mixes (All depend on --color-primary) */
+  --color-primary-80: color-mix(in srgb, var(--color-primary) 80%, transparent);
+  --color-primary-70: color-mix(in srgb, var(--color-primary) 70%, transparent);
+  --color-primary-60: color-mix(in srgb, var(--color-primary) 60%, transparent);
+  --color-primary-50: color-mix(in srgb, var(--color-primary) 50%, transparent);
+  --color-primary-35: color-mix(in srgb, var(--color-primary) 35%, transparent);
+  --color-primary-20: color-mix(in srgb, var(--color-primary) 20%, transparent);
+  --color-primary-16: color-mix(in srgb, var(--color-primary) 16%, transparent);
+  --color-glow: color-mix(in srgb, var(--color-primary) 70%, transparent);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(100deg, var(--color-primary), var(--color-accent));
+  --gradient-timeline: linear-gradient(to bottom, var(--color-primary), var(--color-accent));
+  --gradient-divider: linear-gradient(to right, transparent, var(--color-primary-50), transparent);
+  --gradient-panel: linear-gradient(rgba(5, 8, 10, 0) 0%, rgba(5, 8, 10, 0.94) 14%, rgba(5, 8, 10, 0.94) 86%, rgba(5, 8, 10, 0) 100%);
+  --gradient-scrim: linear-gradient(90deg, rgba(5, 8, 10, 0.9) 0%, rgba(5, 8, 10, 0.65) 38%, rgba(5, 8, 10, 0) 70%);
+
+  /* Typography */
+  --font-sans: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: var(--font-space), sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Radii */
+  --radius-card: 1rem;       /* 16px */
+  --radius-btn: 9999px;      /* Pill */
+  --radius-input: 0.75rem;   /* 12px */
+  --radius-thumb: 0.375rem;  /* 6px */
+
+  /* Shadows */
+  --shadow-glow: 0 0 18px var(--color-glow);
+  --shadow-card: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-popup: 0 20px 60px rgba(0, 0, 0, 0.85);
+}

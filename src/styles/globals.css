@@ -1,0 +1,139 @@
+@import "./theme.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background-color: var(--color-bg);
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: var(--color-primary-35);
+    color: var(--color-text);
+  }
+
+  h1, h2, h3, p, li, label {
+    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.85);
+  }
+
+  .glass h3,
+  .glass p,
+  .glass li,
+  .glass label,
+  .text-gradient {
+    text-shadow: none;
+  }
+}
+
+/* Glass panel style matching live site */
+.glass {
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  background: var(--color-surface-glass);
+  border: 1px solid var(--color-border);
+}
+
+/* Gradient text accent */
+.text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Section label / eyebrow */
+.eyebrow {
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Ambient dark vignette scrim */
+.page-scrim {
+  background: var(--gradient-scrim);
+}
+@media (max-width: 800px) {
+  .page-scrim {
+    background: rgba(5, 8, 10, 0.6);
+  }
+}
+
+/* Section vertical blend panel */
+.panel {
+  background: var(--gradient-panel);
+}
+
+/* Interactive Card Spotlight with dynamic mouse tracking */
+.spotlight {
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.spotlight::before {
+  content: "";
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), var(--color-primary-16), transparent 60%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  position: absolute;
+  inset: 0;
+}
+
+.spotlight:hover {
+  border-color: var(--color-primary-50);
+  transform: translateY(-4px);
+}
+
+.spotlight:hover::before {
+  opacity: 1;
+}
+
+/* Ticker marquee */
+.marquee-track {
+  width: max-content;
+  animation: marquee 38s linear infinite;
+  display: flex;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Pulse ring */
+.pulse-ring {
+  animation: ping-soft 2.2s ease-out infinite;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none !important;
+  }
+  .pulse-ring {
+    animation: none !important;
+  }
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
