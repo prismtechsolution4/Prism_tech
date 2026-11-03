@@ -11,7 +11,7 @@ export default function FloatingTalk() {
     let triggeredAutoPopup = false;
 
     try {
-      if (localStorage.getItem("intechtive-lead-popup") === "submitted") {
+      if (localStorage.getItem("prismtech-lead-popup") === "submitted") {
         triggeredAutoPopup = true;
       }
     } catch {

@@ -20,7 +20,7 @@ export default function Footer() {
           <div>
             <Image
               src="/brand/logo-transparent.png"
-              alt="Intechtive Solutions"
+              alt="PrismTech Solutions"
               width={889}
               height={354}
               className="h-14 w-auto"

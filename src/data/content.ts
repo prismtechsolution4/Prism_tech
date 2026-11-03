@@ -11,12 +11,12 @@ import {
 } from "@/types";
 
 export const company: CompanyInfo = {
-  name: "Intechtive Solutions (PVT) LTD",
+  name: "PrismTech Solutions (PVT) LTD",
   tagline: "Software, AI and security systems that help businesses run smarter, faster and safer.",
-  email: "info@intechtivesolutions.com",
+  email: "info@prismtechsolutions.com",
   address: "PLOT WSA 1 FB Area Block 1",
-  instagram: "https://instagram.com/intechtive.solutions",
-  instagramHandle: "@intechtive.solutions",
+  instagram: "https://instagram.com/prismtech.solutions",
+  instagramHandle: "@prismtech.solutions",
 };
 
 export const navLinks = [
@@ -285,7 +285,7 @@ export const securityServicesData: SecurityItem[] = [
 
 export const faqsData: FAQItem[] = [
   {
-    q: "What does Intechtive Solutions do?",
+    q: "What does PrismTech Solutions do?",
     a: "We provide consultancy, custom software development (mobile, web and desktop), custom AI projects, social media marketing, inventory management, ready-made products (HRMS, POS, Reward App, CRM and an E-commerce platform), and remote security monitoring with camera installation.",
   },
   {

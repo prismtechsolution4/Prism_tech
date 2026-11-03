@@ -15,24 +15,24 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Intechtive Solutions (PVT) LTD — Intelligence + Technology",
+  title: "PrismTech Solutions (PVT) LTD — Intelligence + Technology",
   description:
     "Consultancy, software development (mobile, web, desktop), custom AI, HRMS, POS, Reward App, CRM, and remote security monitoring.",
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "Intechtive Solutions (PVT) LTD — Intelligence + Technology",
+    title: "PrismTech Solutions (PVT) LTD — Intelligence + Technology",
     description:
       "Consultancy, software development (mobile, web, desktop), custom AI, HRMS, POS, Reward App, CRM, and remote security monitoring.",
-    url: "https://intechtivesolutions.com",
-    siteName: "Intechtive Solutions (PVT) LTD",
+    url: "https://prismtechsolutions.com",
+    siteName: "PrismTech Solutions (PVT) LTD",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Intechtive Solutions (PVT) LTD — Intelligence + Technology",
+    title: "PrismTech Solutions (PVT) LTD — Intelligence + Technology",
     description:
       "Consultancy, software development (mobile, web, desktop), custom AI, HRMS, POS, Reward App, CRM, and remote security monitoring.",
   },

@@ -35,12 +35,12 @@ export default function Navbar() {
         {/* Brand Logo */}
         <button
           onClick={() => handleNavClick("#hero")}
-          aria-label="Intechtive Solutions — home"
+          aria-label="PrismTech Solutions — home"
           className="focus:outline-none"
         >
           <Image
             src="/brand/logo-transparent.png"
-            alt="Intechtive Solutions"
+            alt="PrismTech Solutions"
             width={889}
             height={354}
             priority

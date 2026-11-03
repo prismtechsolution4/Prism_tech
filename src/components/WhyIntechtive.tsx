@@ -82,7 +82,7 @@ export default function WhyIntechtive() {
       {/* Why Intechtive content & stats */}
       <div className="mx-auto w-full max-w-7xl px-5 md:px-10">
         <p className="eyebrow mb-4" data-reveal="true">
-          Why Intechtive
+          Why PrismTech
         </p>
         <h2
           className="font-display max-w-3xl text-3xl font-bold md:text-5xl"

@@ -39,7 +39,7 @@ export async function POST(req: Request) {
 
     const { name, email, company, phone, service, message, source } = validated.data;
 
-    const contactTo = process.env.CONTACT_TO || "info@intechtivesolutions.com";
+    const contactTo = process.env.CONTACT_TO || "info@prismtechsolutions.com";
     const smtpHost = process.env.SMTP_HOST;
     const smtpUser = process.env.SMTP_USER;
     const smtpPass = process.env.SMTP_PASS;

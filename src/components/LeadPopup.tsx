@@ -64,7 +64,7 @@ export default function LeadPopup({
       if (res.ok && json.ok) {
         setStatus("sent");
         try {
-          localStorage.setItem("intechtive-lead-popup", "submitted");
+          localStorage.setItem("prismtech-lead-popup", "submitted");
         } catch {
           // Ignore localStorage errors
         }
@@ -109,7 +109,7 @@ export default function LeadPopup({
 
         <Image
           src="/brand/logo-transparent.png"
-          alt="Intechtive Solutions"
+          alt="PrismTech Solutions"
           width={889}
           height={354}
           className="h-10 w-auto"

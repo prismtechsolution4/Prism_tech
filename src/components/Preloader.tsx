@@ -49,7 +49,7 @@ export default function Preloader() {
     >
       <Image
         src="/brand/logo-transparent.png"
-        alt="Intechtive Solutions"
+        alt="PrismTech Solutions"
         width={889}
         height={354}
         priority
