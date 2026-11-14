@@ -111,7 +111,7 @@ export default function Products() {
   }, []);
 
   return (
-    <section id="products" className="relative overflow-hidden px-5 py-28 md:px-10">
+    <section id="products" className="relative z-10 overflow-hidden px-5 py-28 md:px-10 bg-[#101820]">
       {/* Ambient Tech Background Layer: Looping Platform Video + Aurora + Cyber Grid */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
         {/* Looping Digital Product & Platform Interface Background Video */}

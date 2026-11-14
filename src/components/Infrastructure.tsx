@@ -7,7 +7,7 @@ export default function Infrastructure() {
   return (
     <section
       id="security"
-      className="relative overflow-hidden flex min-h-screen items-center px-5 pt-32 pb-24 md:px-10"
+      className="relative z-10 overflow-hidden flex min-h-screen items-center px-5 pt-32 pb-24 md:px-10 bg-[#101820]"
     >
       {/* Ambient Security Background Layer */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">

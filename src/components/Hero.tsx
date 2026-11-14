@@ -2,14 +2,18 @@
 
 import { scrollToSection } from "@/lib/events";
 import { company } from "@/data/content";
+import Hero3DCanvas from "./Hero3DCanvas";
 
 export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex h-svh min-h-[560px] items-center px-5 pt-24 pb-14 md:px-10"
+      className="relative flex h-svh min-h-[560px] items-center px-5 pt-24 pb-14 md:px-10 overflow-hidden"
     >
-      <div className="mx-auto w-full max-w-7xl">
+      {/* 3D Geodesic Globe & Particle Galaxy (strictly self-contained within Hero) */}
+      <Hero3DCanvas />
+
+      <div className="relative z-10 mx-auto w-full max-w-7xl">
         <p className="eyebrow mb-5" data-reveal="true">
           {company.name}
         </p>

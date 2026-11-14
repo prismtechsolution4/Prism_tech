@@ -4,7 +4,6 @@ import { useSpotlight } from "@/lib/useSpotlight";
 import Preloader from "@/components/Preloader";
 import ProgressBar from "@/components/ProgressBar";
 import CustomCursor from "@/components/CustomCursor";
-import ThreeCanvas from "@/components/ThreeCanvas";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import WhyPrismTech from "@/components/WhyPrismTech";
@@ -33,9 +32,6 @@ export default function Home() {
 
       {/* Subtle fine pointer cursor follower */}
       <CustomCursor />
-
-      {/* 3D WebGL Multi-stage Canvas (Hero globe, Services planetary network, Security radar, Contact knot) */}
-      <ThreeCanvas />
 
       {/* 2. Sticky Navbar */}
       <Navbar />
