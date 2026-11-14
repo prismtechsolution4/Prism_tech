@@ -3,6 +3,9 @@ export interface CompanyInfo {
   tagline: string;
   email: string;
   address: string;
+  phone: string;
+  whatsapp: string;
+  whatsappNumber: string;
   instagram: string;
   instagramHandle: string;
 }

@@ -16,7 +16,11 @@ const config: Config = {
         "border-subtle": "var(--color-border-subtle)",
         "border-hover": "var(--color-border-hover)",
         text: "var(--color-text)",
+        "text-secondary": "var(--color-text-secondary)",
         muted: "var(--color-text-muted)",
+        charcoal: "var(--color-charcoal)",
+        graphite: "var(--color-graphite)",
+        "soft-bg": "var(--color-soft-bg)",
         brand: {
           DEFAULT: "var(--color-primary)",
           hover: "var(--color-primary-hover)",
@@ -27,6 +31,7 @@ const config: Config = {
           35: "var(--color-primary-35)",
           20: "var(--color-primary-20)",
           16: "var(--color-primary-16)",
+          10: "var(--color-primary-10)",
         },
         primary: {
           DEFAULT: "var(--color-primary)",
@@ -60,25 +65,6 @@ const config: Config = {
         "gradient-divider": "var(--gradient-divider)",
         "gradient-panel": "var(--gradient-panel)",
         "gradient-scrim": "var(--gradient-scrim)",
-      },
-      keyframes: {
-        fadeUp: {
-          "0%": { opacity: "0", transform: "translateY(16px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
-        },
-        marquee: {
-          "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(-50%)" },
-        },
-        "ping-soft": {
-          "0%": { boxShadow: "0 0 0 0 var(--color-glow)" },
-          "100%": { boxShadow: "0 0 0 18px transparent" },
-        },
-      },
-      animation: {
-        fadeUp: "fadeUp 0.6s ease-out forwards",
-        marquee: "marquee 38s linear infinite",
-        "ping-soft": "ping-soft 2.2s ease-out infinite",
       },
     },
   },

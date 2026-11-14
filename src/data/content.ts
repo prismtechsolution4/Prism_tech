@@ -11,12 +11,15 @@ import {
 } from "@/types";
 
 export const company: CompanyInfo = {
-  name: "PrismTech Solutions (PVT) LTD",
+  name: "IntechTive Solutions (PVT) LTD",
   tagline: "Software, AI and security systems that help businesses run smarter, faster and safer.",
-  email: "info@prismtechsolutions.com",
+  email: "info@intechtivesolutions.com",
+  phone: "+92 319 8669833",
+  whatsappNumber: "03198669833",
+  whatsapp: "https://wa.me/923198669833",
   address: "PLOT WSA 1 FB Area Block 1",
-  instagram: "https://instagram.com/prismtech.solutions",
-  instagramHandle: "@prismtech.solutions",
+  instagram: "https://instagram.com/intechtive.solutions",
+  instagramHandle: "@intechtive.solutions",
 };
 
 export const navLinks = [
@@ -183,7 +186,7 @@ export const productsData: ProductItem[] = [
     name: "HRMS",
     tag: "Human Resource Management",
     blurb: "Attendance, payroll, leave and employee records in one automated workspace.",
-    color: "var(--color-primary)",
+    color: "#087FF5",
     image: "/products/hrms.jpg",
     gallery: [
       "/products/hrms.jpg",
@@ -196,11 +199,11 @@ export const productsData: ProductItem[] = [
     name: "POS",
     tag: "Point of Sale",
     blurb: "Fast checkout, live inventory and sales analytics for retail and hospitality.",
-    color: "var(--color-accent)",
-    image: "/products/hrms.jpg",
+    color: "#38bdf8",
+    image: "/products/hrms-2.jpg",
     gallery: [
-      "/products/hrms.jpg",
       "/products/hrms-2.jpg",
+      "/products/hrms.jpg",
       "/products/hrms-3.jpg",
     ],
   },
@@ -209,12 +212,12 @@ export const productsData: ProductItem[] = [
     name: "Reward App",
     tag: "Loyalty & Engagement",
     blurb: "Points, tiers and campaigns that keep customers coming back.",
-    color: "var(--color-primary)",
-    image: "/products/hrms.jpg",
+    color: "#087FF5",
+    image: "/products/hrms-3.jpg",
     gallery: [
+      "/products/hrms-3.jpg",
       "/products/hrms.jpg",
       "/products/hrms-2.jpg",
-      "/products/hrms-3.jpg",
     ],
   },
   {
@@ -222,7 +225,7 @@ export const productsData: ProductItem[] = [
     name: "CRM",
     tag: "Customer Relationship",
     blurb: "Pipelines, contacts and follow-ups that help your team close more deals.",
-    color: "var(--color-accent)",
+    color: "#38bdf8",
     image: "/products/hrms.jpg",
     gallery: [
       "/products/hrms.jpg",
@@ -235,12 +238,12 @@ export const productsData: ProductItem[] = [
     name: "E-commerce Platform",
     tag: "Online Store",
     blurb: "A ready-to-launch online store with catalogue, cart, payments and order management.",
-    color: "var(--color-primary)",
-    image: "/products/hrms.jpg",
+    color: "#087FF5",
+    image: "/products/hrms-2.jpg",
     gallery: [
-      "/products/hrms.jpg",
       "/products/hrms-2.jpg",
       "/products/hrms-3.jpg",
+      "/products/hrms.jpg",
     ],
   },
 ];

@@ -19,6 +19,8 @@ class EventEmitter<T> {
 }
 
 export const serviceSelectionEvent = new EventEmitter<string>();
+export const productSelectionEvent = new EventEmitter<number>();
+export const productProgressEvent = new EventEmitter<number>();
 
 export function scrollToSection(sectionId: string, preselectedService?: string) {
   if (preselectedService) {

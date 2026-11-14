@@ -7,7 +7,7 @@ import CustomCursor from "@/components/CustomCursor";
 import ThreeCanvas from "@/components/ThreeCanvas";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import WhyIntechtive from "@/components/WhyIntechtive";
+import WhyPrismTech from "@/components/WhyPrismTech";
 import Services from "@/components/Services";
 import Process from "@/components/Process";
 import TechStack from "@/components/TechStack";
@@ -45,8 +45,8 @@ export default function Home() {
         {/* 3. Hero */}
         <Hero />
 
-        {/* 4. Marquee + 5. Why Intechtive */}
-        <WhyIntechtive />
+        {/* 4. Marquee + 5. Why PrismTech */}
+        <WhyPrismTech />
 
         {/* 6. What we do (Interactive node network + accordion) */}
         <Services />

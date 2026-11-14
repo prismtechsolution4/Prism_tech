@@ -3,28 +3,56 @@
 import { useEffect } from "react";
 
 /**
- * Attaches mouse move listener to cards with `.spotlight` class
- * to dynamically update `--mx` and `--my` coordinates for the glow effect.
+ * Attaches a lightweight, high-performance mousemove listener
+ * that only calculates rect for the single active spotlight card under cursor.
+ * Disabled on touch/mobile devices to conserve battery and eliminate scroll friction.
  */
 export function useSpotlight() {
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      const cards = document.querySelectorAll<HTMLElement>(".spotlight");
-      cards.forEach((card) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
+    // Completely disable on mobile / touch / coarse pointers
+    if (window.matchMedia("(pointer: coarse)").matches) return;
 
-        if (x >= -50 && x <= rect.width + 50 && y >= -50 && y <= rect.height + 50) {
-          card.style.setProperty("--mx", `${x}px`);
-          card.style.setProperty("--my", `${y}px`);
-        }
-      });
+    let activeCard: HTMLElement | null = null;
+    let cardRect: DOMRect | null = null;
+
+    const handlePointerOver = (e: MouseEvent) => {
+      const target = (e.target as HTMLElement | null)?.closest<HTMLElement>(".spotlight");
+      if (target) {
+        activeCard = target;
+        cardRect = target.getBoundingClientRect();
+      } else {
+        activeCard = null;
+        cardRect = null;
+      }
     };
 
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!activeCard) return;
+      if (!cardRect) {
+        cardRect = activeCard.getBoundingClientRect();
+      }
+      const x = e.clientX - cardRect.left;
+      const y = e.clientY - cardRect.top;
+      activeCard.style.setProperty("--mx", `${x}px`);
+      activeCard.style.setProperty("--my", `${y}px`);
+    };
+
+    const handleScrollOrResize = () => {
+      if (activeCard) {
+        cardRect = activeCard.getBoundingClientRect();
+      }
+    };
+
+    window.addEventListener("mouseover", handlePointerOver, { passive: true });
     window.addEventListener("mousemove", handleMouseMove, { passive: true });
+    window.addEventListener("scroll", handleScrollOrResize, { passive: true });
+    window.addEventListener("resize", handleScrollOrResize, { passive: true });
+
     return () => {
+      window.removeEventListener("mouseover", handlePointerOver);
       window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("scroll", handleScrollOrResize);
+      window.removeEventListener("resize", handleScrollOrResize);
     };
   }, []);
 }

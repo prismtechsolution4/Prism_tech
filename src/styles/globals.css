@@ -7,8 +7,9 @@
 @layer base {
   html {
     background-color: var(--color-bg);
-    scroll-behavior: smooth;
     color-scheme: dark;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
 
   body {
@@ -16,35 +17,31 @@
     color: var(--color-text);
     font-family: var(--font-sans);
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-overflow-scrolling: touch;
   }
 
   ::selection {
     background-color: var(--color-primary-35);
-    color: var(--color-text);
+    color: #ffffff;
   }
 
-  h1, h2, h3, p, li, label {
-    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.85);
-  }
-
-  .glass h3,
-  .glass p,
-  .glass li,
-  .glass label,
-  .text-gradient {
-    text-shadow: none;
+  /* Crisp, clean enterprise text without heavy blurry drop shadows */
+  h1, h2, h3 {
+    letter-spacing: -0.02em;
   }
 }
 
-/* Glass panel style matching live site */
+/* Enterprise glass surface */
 .glass {
-  -webkit-backdrop-filter: blur(18px);
-  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
   background: var(--color-surface-glass);
   border: 1px solid var(--color-border);
 }
 
-/* Gradient text accent */
+/* Subtle gradient text accent */
 .text-gradient {
   background: var(--gradient-primary);
   -webkit-background-clip: text;
@@ -54,11 +51,11 @@
 
 /* Section label / eyebrow */
 .eyebrow {
-  letter-spacing: 0.28em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--color-primary);
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 /* Ambient dark vignette scrim */
@@ -67,7 +64,7 @@
 }
 @media (max-width: 800px) {
   .page-scrim {
-    background: rgba(5, 8, 10, 0.6);
+    background: rgba(16, 24, 32, 0.75);
   }
 }
 
@@ -78,28 +75,47 @@
 
 /* Interactive Card Spotlight with dynamic mouse tracking */
 .spotlight {
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.25s ease;
   position: relative;
   overflow: hidden;
 }
 
 .spotlight::before {
   content: "";
-  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), var(--color-primary-16), transparent 60%);
+  background: radial-gradient(400px circle at var(--mx, 50%) var(--my, 50%), rgba(8, 127, 245, 0.12), transparent 60%);
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.25s ease;
   position: absolute;
   inset: 0;
 }
 
 .spotlight:hover {
-  border-color: var(--color-primary-50);
-  transform: translateY(-4px);
+  border-color: var(--color-border-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.5), 0 0 1px 1px rgba(8, 127, 245, 0.2);
 }
 
 .spotlight:hover::before {
   opacity: 1;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(250%) skewX(-20deg);
+  }
+}
+
+@keyframes borderGlow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 /* Keyframe animations */
@@ -114,17 +130,17 @@
 
 @keyframes ping-soft {
   0% {
-    box-shadow: 0 0 0 0 var(--color-primary-50);
+    box-shadow: 0 0 0 0 rgba(8, 127, 245, 0.4);
   }
   100% {
-    box-shadow: 0 0 0 18px transparent;
+    box-shadow: 0 0 0 14px transparent;
   }
 }
 
 @keyframes fadeUp {
   0% {
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(14px);
   }
   100% {
     opacity: 1;

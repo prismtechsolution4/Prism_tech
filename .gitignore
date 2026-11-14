@@ -34,7 +34,13 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# temp research scripts
+# temp research scripts & test artifacts
 /_research
 /downloaded_assets
 /screenshots
+public/screenshot_*
+public/test_*
+public/verify_*
+public/products/original_backup/
+
+.vercel

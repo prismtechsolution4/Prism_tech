@@ -1,20 +1,31 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 
 export default function ProgressBar() {
-  const [scrollProgress, setScrollProgress] = useState(0);
+  const barRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
+    let ticking = false;
+
+    const updateProgress = () => {
       const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-      if (totalHeight <= 0) return;
-      const progress = Math.min(1, Math.max(0, window.scrollY / totalHeight));
-      setScrollProgress(progress);
+      if (totalHeight > 0 && barRef.current) {
+        const progress = Math.min(1, Math.max(0, window.scrollY / totalHeight));
+        barRef.current.style.transform = `scaleX(${progress})`;
+      }
+      ticking = false;
+    };
+
+    const handleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(updateProgress);
+        ticking = true;
+      }
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
+    updateProgress();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -24,8 +35,9 @@ export default function ProgressBar() {
       aria-hidden="true"
     >
       <div
-        className="h-full origin-left bg-gradient-to-r from-brand to-cyan transition-transform duration-75 ease-out"
-        style={{ transform: `scaleX(${scrollProgress})` }}
+        ref={barRef}
+        className="h-full origin-left bg-gradient-to-r from-brand to-cyan will-change-transform"
+        style={{ transform: "scaleX(0)" }}
       />
     </div>
   );

@@ -36,15 +36,15 @@ export default function Hero() {
         >
           <button
             onClick={() => scrollToSection("services")}
-            className="rounded-full bg-brand px-7 py-3 font-semibold text-black transition hover:brightness-110 focus:outline-none"
+            className="rounded-full bg-brand px-7 py-3 font-semibold text-white transition hover:bg-brand-hover shadow-md hover:shadow-brand/25 focus:outline-none"
           >
             Explore what we do
           </button>
           <button
             onClick={() => scrollToSection("contact")}
-            className="glass rounded-full px-7 py-3 font-semibold text-text transition hover:bg-white/10 focus:outline-none"
+            className="glass rounded-full border border-white/15 px-7 py-3 font-semibold text-white transition hover:bg-white/10 hover:border-brand/50 focus:outline-none"
           >
-            Start a project
+            Book a free consultation
           </button>
         </div>
       </div>

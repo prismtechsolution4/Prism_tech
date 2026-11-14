@@ -83,7 +83,25 @@ export default function NodeNetwork({
 
     let startTime = performance.now();
 
+    let isVisible = false;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isVisible = entry.isIntersecting;
+        if (isVisible && !isReducedMotion && !animId) {
+          animId = requestAnimationFrame(draw);
+        }
+      },
+      { threshold: 0.05 }
+    );
+    observer.observe(canvas);
+
     const draw = (currentTime: number) => {
+      if (!isVisible) {
+        animId = 0;
+        return;
+      }
+
       const elapsed = (currentTime - startTime) / 1000;
       ctx.clearRect(0, 0, width, height);
 
@@ -229,6 +247,7 @@ export default function NodeNetwork({
     animId = requestAnimationFrame(draw);
 
     return () => {
+      observer.disconnect();
       cancelAnimationFrame(animId);
       window.removeEventListener("resize", handleResize);
       canvas.removeEventListener("mousemove", handlePointerMove);

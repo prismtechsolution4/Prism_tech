@@ -1,6 +1,6 @@
-# Intechtive Solutions (PVT) LTD — Official Website
+# PrismTech Solutions (PVT) LTD — Official Website
 
-High-performance, pixel-precise rebuild of [Intechtive Solutions](https://intechtivesolutions.com/) ("Intelligence + Technology").
+High-performance, pixel-precise web platform for [PrismTech Solutions](https://prismtechsolutions.com/) ("Intelligence + Technology").
 
 Built with **Next.js (App Router)**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**.
 
@@ -16,7 +16,7 @@ All colors, typography, border radii, and shadows live in **one centralized file
 
 ### Core Palette
 - **Background (Obsidian)**: `#05080a` (`var(--color-bg)`)
-- **Primary Brand (Green)**: `#7ed33f` (`var(--color-primary)`)
+- **Primary Brand (Mint Emerald)**: `#3ee69b` (`var(--color-primary)`)
 - **Accent (Cyber Cyan)**: `#22e5ff` (`var(--color-accent)`)
 - **Text (Ink)**: `#e8f1ee` (`var(--color-text)`)
 - **Muted Text**: `#8ba19a` (`var(--color-text-muted)`)
@@ -30,7 +30,7 @@ All colors, typography, border radii, and shadows live in **one centralized file
 3. **Sticky Navbar**: Brand logo, smooth-scroll links, "Get in touch" CTA, and responsive mobile hamburger drawer.
 4. **Hero Section**: H1 "Intelligence + Technology, engineered for what's next.", subcopy, CTAs, and scroll indicator.
 5. **Infinite Marquee Ticker**: Continuous seamless looping banner with pause-on-hover and accessibility support.
-6. **Why Intechtive (Stats)**: Interactive spotlight cards with animated count-up numbers:
+6. **Why PrismTech (Stats)**: Interactive spotlight cards with animated count-up numbers:
    - 4 Core service lines
    - 5 Ready-made products
    - 3 Platforms: web, mobile & desktop
@@ -81,7 +81,7 @@ All colors, typography, border radii, and shadows live in **one centralized file
 │   │   ├── ProgressBar.tsx
 │   │   ├── Services.tsx
 │   │   ├── TechStack.tsx
-│   │   └── WhyIntechtive.tsx
+│   │   └── WhyPrismTech.tsx
 │   ├── data/
 │   │   └── content.ts       # Central content store (edit copy without touching components)
 │   ├── lib/
