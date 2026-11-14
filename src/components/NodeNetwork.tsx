@@ -36,16 +36,15 @@ export default function NodeNetwork({
 
     const isReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    // Colors
-    const rootStyle = getComputedStyle(document.documentElement);
-    const primaryColor = rootStyle.getPropertyValue("--color-primary").trim() || "#7ed33f";
-    const accentColor = rootStyle.getPropertyValue("--color-accent").trim() || "#22e5ff";
+    // Colors matching PrismTech electric blue & cyan palette
+    const primaryColor = "#087FF5";
+    const accentColor = "#38bdf8";
 
     const nodeColors = [
-      primaryColor,
-      accentColor,
-      "#a3e635",
-      "#facc15",
+      "#087FF5",
+      "#38bdf8",
+      "#60a5fa",
+      "#00b4d8",
     ];
 
     // Mouse coordinates relative to canvas
