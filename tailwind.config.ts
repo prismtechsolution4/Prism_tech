@@ -38,7 +38,7 @@ const config: Config = {
           hover: "var(--color-primary-hover)",
         },
         accent: "var(--color-accent)",
-        cyan: "var(--color-accent)",
+        cyan: "#38BDF8",
         emerald: "var(--color-emerald)",
         obsidian: "var(--color-bg)",
         glow: "var(--color-glow)",

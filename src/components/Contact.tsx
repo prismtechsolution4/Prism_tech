@@ -326,7 +326,7 @@ export default function Contact() {
           <button
             type="submit"
             disabled={status === "sending"}
-            className="flex w-full items-center justify-center gap-2 rounded-full bg-brand px-6 py-3.5 font-semibold text-white transition hover:bg-brand-hover shadow-md hover:shadow-brand/25 disabled:opacity-60 focus:outline-none"
+            className="flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#087FF5] to-[#0770db] px-6 py-3.5 font-semibold text-white shadow-[0_4px_20px_rgba(8,127,245,0.4)] transition-all duration-300 hover:shadow-[0_6px_28px_rgba(8,127,245,0.65)] hover:brightness-110 disabled:opacity-60 focus:outline-none"
           >
             {status === "sending" ? (
               <span>Booking consultation...</span>
