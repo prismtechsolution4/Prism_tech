@@ -187,11 +187,9 @@ export const productsData: ProductItem[] = [
     tag: "Workforce & Talent Engine",
     blurb: "Enterprise-grade attendance tracking, multi-tier salary payroll, biometric sync and self-service employee portal.",
     color: "#087FF5",
-    image: "/products/hrms-2.jpg",
+    image: "/products/hrms-ui.jpg",
     gallery: [
-      "/products/hrms-2.jpg",
-      "/products/hrms.jpg",
-      "/products/hrms-3.jpg",
+      "/products/hrms-ui.jpg",
     ],
     metrics: [
       { label: "Payroll Processing", value: "< 3 mins" },
@@ -211,11 +209,9 @@ export const productsData: ProductItem[] = [
     tag: "Point of Sale & Stock",
     blurb: "Lightning-fast barcode checkout, live multi-branch inventory sync, offline-mode resilience and fiscal receipting.",
     color: "#38bdf8",
-    image: "/products/hrms-2.jpg",
+    image: "/products/pos-ui.jpg",
     gallery: [
-      "/products/hrms-2.jpg",
-      "/products/hrms-3.jpg",
-      "/products/hrms.jpg",
+      "/products/pos-ui.jpg",
     ],
     metrics: [
       { label: "Barcode Scan Speed", value: "0.15s" },
@@ -235,11 +231,9 @@ export const productsData: ProductItem[] = [
     tag: "Retention & Customer CRM",
     blurb: "White-label mobile loyalty platform that turns one-time shoppers into lifelong brand advocates through gamified perks.",
     color: "#087FF5",
-    image: "/products/hrms.jpg",
+    image: "/products/reward-ui.jpg",
     gallery: [
-      "/products/hrms.jpg",
-      "/products/hrms-2.jpg",
-      "/products/hrms-3.jpg",
+      "/products/reward-ui.jpg",
     ],
     metrics: [
       { label: "Retention Uplift", value: "+38%" },
@@ -259,11 +253,9 @@ export const productsData: ProductItem[] = [
     tag: "Sales Pipeline & Leads",
     blurb: "Intelligent sales pipeline management, automated WhatsApp lead captures, deal forecasting and omnichannel timeline.",
     color: "#38bdf8",
-    image: "/products/hrms-2.jpg",
+    image: "/products/crm-ui.jpg",
     gallery: [
-      "/products/hrms-2.jpg",
-      "/products/hrms.jpg",
-      "/products/hrms-3.jpg",
+      "/products/crm-ui.jpg",
     ],
     metrics: [
       { label: "Close Rate Boost", value: "+27%" },
@@ -283,11 +275,9 @@ export const productsData: ProductItem[] = [
     tag: "Online Store & Logistics",
     blurb: "Headless, ultra-fast online storefront with sub-second page loads, automated payment gateway integration and courier dispatch.",
     color: "#087FF5",
-    image: "/products/hrms.jpg",
+    image: "/products/ecommerce-ui.jpg",
     gallery: [
-      "/products/hrms.jpg",
-      "/products/hrms-2.jpg",
-      "/products/hrms-3.jpg",
+      "/products/ecommerce-ui.jpg",
     ],
     metrics: [
       { label: "Lighthouse Performance", value: "98/100" },

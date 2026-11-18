@@ -249,26 +249,18 @@ export default function Products() {
                       fill
                       sizes="(min-width: 1024px) 680px, 95vw"
                       priority={idx === 0}
-                      className="object-cover object-center scale-[1.12] transition-transform duration-700 hover:scale-[1.15]"
-                      style={{ filter: "saturate(0.55) brightness(0.88) hue-rotate(195deg) contrast(1.05)" }}
+                      className="object-cover object-top transition-transform duration-700 hover:scale-[1.02]"
                     />
-                    {/* Hue correction: blue-navy multiply */}
-                    <div className="pointer-events-none absolute inset-0" style={{ background: "rgba(6, 14, 38, 0.30)", mixBlendMode: "multiply" }} />
-                    {/* Blue tone boost */}
-                    <div className="pointer-events-none absolute inset-0" style={{ background: "rgba(8, 127, 245, 0.08)", mixBlendMode: "screen" }} />
-                    {/* Name/data privacy mask — covers employee list rows */}
-                    <div className="pointer-events-none absolute" style={{ top: "28%", left: "18%", width: "55%", height: "52%", backdropFilter: "blur(10px)", background: "rgba(8, 15, 32, 0.45)" }} />
-                    {/* Light vignette only */}
-                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#07101f] via-transparent to-transparent opacity-50" />
-                    <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_30px_rgba(7,12,20,0.6)]" />
+                    {/* Subtle bottom vignette to blend into bezel footer */}
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#070c14]/50 via-transparent to-transparent" />
                   </div>
                 ))}
 
                 {/* Floating Interactive Telemetry Badge */}
-                <div className="absolute top-4 right-4 z-20 flex items-center gap-2 rounded-lg border border-white/15 bg-[#101820]/85 px-3 py-1.5 backdrop-blur-md shadow-lg">
+                <div className="absolute top-4 right-4 z-20 flex items-center gap-2 rounded-lg border border-white/15 bg-[#101820]/90 px-3 py-1.5 backdrop-blur-md shadow-lg">
                   <span className="h-2 w-2 rounded-full bg-[#087FF5] shadow-[0_0_8px_#087FF5]" />
                   <span className="font-mono text-xs font-semibold text-white">
-                    {product.name} Active
+                    {product.name} Live
                   </span>
                 </div>
               </div>
@@ -290,38 +282,47 @@ export default function Products() {
               )}
             </div>
 
-            {/* Interactive Thumbnail Switcher Row */}
-            <div className="flex items-center justify-between gap-3 px-1">
-              <span className="text-xs font-mono text-[#94A3B8]">
-                Screenshots ({activeImageIndex + 1}/{product.gallery.length}):
-              </span>
-              <div className="flex gap-2">
-                {product.gallery.map((imgSrc, idx) => (
-                  <button
-                    key={`${product.id}-thumb-${idx}`}
-                    onClick={() => setActiveImageIndex(idx)}
-                    aria-label={`View ${product.name} screen ${idx + 1}`}
-                    className={`relative h-12 w-20 overflow-hidden rounded-lg border transition-all duration-200 ${
-                      idx === activeImageIndex
-                        ? "border-[#087FF5] ring-2 ring-[#087FF5]/50 shadow-[0_0_12px_rgba(8,127,245,0.5)] scale-105"
-                        : "border-white/15 opacity-60 hover:opacity-100"
-                    }`}
-                  >
-                    <Image
-                      src={imgSrc}
-                      alt=""
-                      fill
-                      sizes="80px"
-                      className="object-cover scale-[1.1]"
-                      style={{ filter: "saturate(0.55) brightness(0.88) hue-rotate(195deg) contrast(1.05)" }}
-                    />
-                    <div className="pointer-events-none absolute inset-0" style={{ background: "rgba(6, 14, 38, 0.30)", mixBlendMode: "multiply" }} />
-                    <div className="pointer-events-none absolute inset-0" style={{ background: "rgba(8, 127, 245, 0.08)", mixBlendMode: "screen" }} />
-                    <div className="pointer-events-none absolute" style={{ top: "28%", left: "18%", width: "55%", height: "52%", backdropFilter: "blur(8px)", background: "rgba(8, 15, 32, 0.4)" }} />
-                  </button>
-                ))}
+            {/* Interactive Switcher / Verified Build Row */}
+            {product.gallery.length > 1 ? (
+              <div className="flex items-center justify-between gap-3 px-1">
+                <span className="text-xs font-mono text-[#94A3B8]">
+                  Screenshots ({activeImageIndex + 1}/{product.gallery.length}):
+                </span>
+                <div className="flex gap-2">
+                  {product.gallery.map((imgSrc, idx) => (
+                    <button
+                      key={`${product.id}-thumb-${idx}`}
+                      onClick={() => setActiveImageIndex(idx)}
+                      aria-label={`View ${product.name} screen ${idx + 1}`}
+                      className={`relative h-12 w-20 overflow-hidden rounded-lg border transition-all duration-200 ${
+                        idx === activeImageIndex
+                          ? "border-[#087FF5] ring-2 ring-[#087FF5]/50 shadow-[0_0_12px_rgba(8,127,245,0.5)] scale-105"
+                          : "border-white/15 opacity-60 hover:opacity-100"
+                      }`}
+                    >
+                      <Image
+                        src={imgSrc}
+                        alt=""
+                        fill
+                        sizes="80px"
+                        className="object-cover"
+                      />
+                    </button>
+                  ))}
+                </div>
               </div>
-            </div>
+            ) : (
+              <div className="flex items-center justify-between gap-3 px-2 py-1 text-xs font-mono text-[#94A3B8]">
+                <span className="flex items-center gap-2">
+                  <span className="relative flex h-2 w-2">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#087FF5] opacity-75" />
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-[#087FF5]" />
+                  </span>
+                  Enterprise Edition • 99.9% Uptime SLA
+                </span>
+                <span className="text-white/50">Next.js Cloud Ready</span>
+              </div>
+            )}
           </div>
 
           {/* ----------------------------------------------------------- */}
