@@ -252,10 +252,15 @@ export default function Products() {
                       sizes="(min-width: 1024px) 680px, 95vw"
                       priority={idx === 0}
                       className="object-cover object-center scale-[1.12] transition-transform duration-700 hover:scale-[1.15]"
+                      style={{ filter: "saturate(0.4) brightness(0.68) hue-rotate(195deg) contrast(1.1)" }}
                     />
-                    {/* Deep Blue Vignette Overlay to ensure pure obsidian & electric blue tone */}
-                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#070c14] via-transparent to-transparent opacity-60" />
-                    <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_40px_rgba(7,12,20,0.85)]" />
+                    {/* Green killer: dark blue multiply layer */}
+                    <div className="pointer-events-none absolute inset-0" style={{ background: "rgba(6, 14, 38, 0.52)", mixBlendMode: "multiply" }} />
+                    {/* Blue luminance boost */}
+                    <div className="pointer-events-none absolute inset-0" style={{ background: "rgba(8, 127, 245, 0.10)", mixBlendMode: "screen" }} />
+                    {/* Bottom vignette */}
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#070c14] via-transparent to-transparent opacity-70" />
+                    <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_50px_rgba(7,12,20,0.9)]" />
                   </div>
                 ))}
 
@@ -308,7 +313,10 @@ export default function Products() {
                       fill
                       sizes="80px"
                       className="object-cover scale-[1.1]"
+                      style={{ filter: "saturate(0.4) brightness(0.68) hue-rotate(195deg) contrast(1.1)" }}
                     />
+                    <div className="pointer-events-none absolute inset-0" style={{ background: "rgba(6, 14, 38, 0.52)", mixBlendMode: "multiply" }} />
+                    <div className="pointer-events-none absolute inset-0" style={{ background: "rgba(8, 127, 245, 0.10)", mixBlendMode: "screen" }} />
                   </button>
                 ))}
               </div>
