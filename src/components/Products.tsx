@@ -99,10 +99,8 @@ export default function Products() {
     return () => clearInterval(interval);
   }, [isPaused]);
 
-  // WhatsApp demo message link
-  const whatsappUrl = `https://wa.me/${company.whatsappNumber}?text=${encodeURIComponent(
-    `Hello PrismTech Solutions, I would like to request a live demo for your product: ${product.name}.`
-  )}`;
+  // WhatsApp demo message link (unused in this section)
+  // const whatsappUrl = ...
 
   return (
     <section id="products" className="relative z-10 overflow-hidden px-5 py-28 md:px-10 bg-[#101820]">
@@ -252,15 +250,17 @@ export default function Products() {
                       sizes="(min-width: 1024px) 680px, 95vw"
                       priority={idx === 0}
                       className="object-cover object-center scale-[1.12] transition-transform duration-700 hover:scale-[1.15]"
-                      style={{ filter: "saturate(0.4) brightness(0.68) hue-rotate(195deg) contrast(1.1)" }}
+                      style={{ filter: "saturate(0.55) brightness(0.88) hue-rotate(195deg) contrast(1.05)" }}
                     />
-                    {/* Green killer: dark blue multiply layer */}
-                    <div className="pointer-events-none absolute inset-0" style={{ background: "rgba(6, 14, 38, 0.52)", mixBlendMode: "multiply" }} />
-                    {/* Blue luminance boost */}
-                    <div className="pointer-events-none absolute inset-0" style={{ background: "rgba(8, 127, 245, 0.10)", mixBlendMode: "screen" }} />
-                    {/* Bottom vignette */}
-                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#070c14] via-transparent to-transparent opacity-70" />
-                    <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_50px_rgba(7,12,20,0.9)]" />
+                    {/* Hue correction: blue-navy multiply */}
+                    <div className="pointer-events-none absolute inset-0" style={{ background: "rgba(6, 14, 38, 0.30)", mixBlendMode: "multiply" }} />
+                    {/* Blue tone boost */}
+                    <div className="pointer-events-none absolute inset-0" style={{ background: "rgba(8, 127, 245, 0.08)", mixBlendMode: "screen" }} />
+                    {/* Name/data privacy mask — covers employee list rows */}
+                    <div className="pointer-events-none absolute" style={{ top: "28%", left: "18%", width: "55%", height: "52%", backdropFilter: "blur(10px)", background: "rgba(8, 15, 32, 0.45)" }} />
+                    {/* Light vignette only */}
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#07101f] via-transparent to-transparent opacity-50" />
+                    <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_30px_rgba(7,12,20,0.6)]" />
                   </div>
                 ))}
 
@@ -313,10 +313,11 @@ export default function Products() {
                       fill
                       sizes="80px"
                       className="object-cover scale-[1.1]"
-                      style={{ filter: "saturate(0.4) brightness(0.68) hue-rotate(195deg) contrast(1.1)" }}
+                      style={{ filter: "saturate(0.55) brightness(0.88) hue-rotate(195deg) contrast(1.05)" }}
                     />
-                    <div className="pointer-events-none absolute inset-0" style={{ background: "rgba(6, 14, 38, 0.52)", mixBlendMode: "multiply" }} />
-                    <div className="pointer-events-none absolute inset-0" style={{ background: "rgba(8, 127, 245, 0.10)", mixBlendMode: "screen" }} />
+                    <div className="pointer-events-none absolute inset-0" style={{ background: "rgba(6, 14, 38, 0.30)", mixBlendMode: "multiply" }} />
+                    <div className="pointer-events-none absolute inset-0" style={{ background: "rgba(8, 127, 245, 0.08)", mixBlendMode: "screen" }} />
+                    <div className="pointer-events-none absolute" style={{ top: "28%", left: "18%", width: "55%", height: "52%", backdropFilter: "blur(8px)", background: "rgba(8, 15, 32, 0.4)" }} />
                   </button>
                 ))}
               </div>
@@ -384,22 +385,13 @@ export default function Products() {
             </div>
 
             {/* Action CTA Buttons */}
-            <div className="mt-8 flex flex-wrap items-center gap-3 pt-6 border-t border-white/10">
+            <div className="mt-8 pt-6 border-t border-white/10">
               <button
                 onClick={() => scrollToSection("contact", product.name)}
-                className="flex-1 min-w-[170px] rounded-full bg-gradient-to-r from-[#087FF5] to-[#0770db] px-6 py-3.5 text-center text-xs md:text-sm font-semibold text-white shadow-[0_4px_20px_rgba(8,127,245,0.4)] transition-all duration-300 hover:shadow-[0_6px_28px_rgba(8,127,245,0.65)] hover:brightness-110 focus:outline-none"
+                className="w-full rounded-full bg-gradient-to-r from-[#087FF5] to-[#0770db] px-6 py-4 text-center text-sm font-semibold text-white shadow-[0_4px_20px_rgba(8,127,245,0.4)] transition-all duration-300 hover:shadow-[0_6px_28px_rgba(8,127,245,0.65)] hover:brightness-110 focus:outline-none"
               >
                 Request a live demo →
               </button>
-
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-3.5 text-xs md:text-sm font-semibold text-white transition-all duration-300 hover:border-[#087FF5] hover:bg-[#087FF5]/10 hover:text-[#38bdf8]"
-              >
-                <span>Ask on WhatsApp</span>
-              </a>
             </div>
           </div>
         </div>
