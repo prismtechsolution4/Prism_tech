@@ -26,6 +26,9 @@ export interface ProductItem {
   color: string;
   image: string;
   gallery: string[];
+  metrics?: { label: string; value: string }[];
+  features?: { title: string; desc: string }[];
+  badges?: string[];
 }
 
 export interface SecurityItem {
