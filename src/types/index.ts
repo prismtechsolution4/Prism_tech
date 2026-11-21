@@ -8,6 +8,7 @@ export interface CompanyInfo {
   whatsappNumber: string;
   instagram: string;
   instagramHandle: string;
+  linkedin: string;
 }
 
 export interface ServiceItem {

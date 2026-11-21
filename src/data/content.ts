@@ -20,6 +20,7 @@ export const company: CompanyInfo = {
   address: "",
   instagram: "",
   instagramHandle: "",
+  linkedin: "https://www.linkedin.com/company/prismtechsolution/",
 };
 
 export const navLinks = [
