@@ -58,6 +58,39 @@
   font-weight: 700;
 }
 
+/* Hide scrollbar completely across Chrome, Safari, Edge, Firefox, and IE */
+.no-scrollbar::-webkit-scrollbar,
+.scrollbar-none::-webkit-scrollbar,
+::-webkit-scrollbar.no-scrollbar,
+::-webkit-scrollbar.scrollbar-none {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  -webkit-appearance: none !important;
+}
+
+.no-scrollbar,
+.scrollbar-none {
+  -ms-overflow-style: none !important; /* IE and Edge */
+  scrollbar-width: none !important;    /* Firefox */
+}
+
+/* Global sleek technical scrollbar (replaces default Windows/browser scrollbars) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(8, 127, 245, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(8, 127, 245, 0.55);
+}
+
 /* Ambient dark vignette scrim */
 .page-scrim {
   background: var(--gradient-scrim);

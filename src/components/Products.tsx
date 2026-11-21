@@ -175,7 +175,10 @@ export default function Products() {
         {/* ------------------------------------------------------------- */}
         {/* INTERACTIVE PRODUCT DOCK (HORIZONTAL TABS WITH ICONS)         */}
         {/* ------------------------------------------------------------- */}
-        <div className="mt-8 flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+        <div
+          className="mt-8 flex items-center gap-2 overflow-x-auto pb-2 no-scrollbar scrollbar-none [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        >
           {productsData.map((p, idx) => {
             const isSelected = idx === activeProductIndex;
             return (

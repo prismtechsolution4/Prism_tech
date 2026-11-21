@@ -193,8 +193,8 @@ export default function Infrastructure() {
           onScroll={handleScroll}
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
-          className="mt-10 flex gap-5 overflow-x-auto pb-4 pt-2 scrollbar-none snap-x snap-mandatory"
-          style={{ scrollBehavior: "smooth" }}
+          className="mt-10 flex gap-5 overflow-x-auto pb-4 pt-2 no-scrollbar scrollbar-none snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+          style={{ scrollBehavior: "smooth", scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {securityServicesData.map((item, idx) => {
             const isCurrent = idx === activeIndex;
