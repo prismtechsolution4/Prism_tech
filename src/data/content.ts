@@ -318,16 +318,52 @@ export const engagementModelsData: EngagementModel[] = [
 
 export const securityServicesData: SecurityItem[] = [
   {
+    tag: "SRV-01",
+    title: "Custom Software Development",
+    text: "Bespoke enterprise web, mobile, and desktop applications architected for scalability, high performance, and rapid user adoption.",
+    points: ["Web, Mobile & Desktop", "Microservices Architecture", "High-Throughput APIs"],
+  },
+  {
+    tag: "SRV-02",
     title: "Cloud & DevOps Infrastructure",
-    text: "High-availability cloud architecture, automated CI/CD deployment pipelines, containerization, and zero-downtime microservice orchestration.",
+    text: "High-availability cloud hosting on AWS, GCP & Azure with automated CI/CD pipelines, Docker containerization, and 99.9% uptime SLA.",
+    points: ["AWS, GCP & Azure Cloud", "Kubernetes & Docker", "Automated CI/CD Pipelines"],
   },
   {
+    tag: "SRV-03",
+    title: "Enterprise AI & Machine Learning",
+    text: "Custom predictive algorithms, conversational AI agents, and deep workflow automation tailored to your proprietary data.",
+    points: ["Custom AI Agents & LLMs", "Predictive Analytics", "Process Automation"],
+  },
+  {
+    tag: "SRV-04",
+    title: "Mobile App Engineering",
+    text: "High-performance native iOS & Android applications along with cross-platform Flutter and React Native deployments.",
+    points: ["Native iOS & Android", "Flutter & React Native", "Offline-First Sync"],
+  },
+  {
+    tag: "SRV-05",
+    title: "Modern Web Applications",
+    text: "Blazing-fast responsive interfaces, customer portals, and internal business dashboards built with Next.js, React, and TypeScript.",
+    points: ["Next.js & React 19", "Sub-Second Page Loads", "Enterprise RBAC Portals"],
+  },
+  {
+    tag: "SRV-06",
     title: "Cybersecurity & Data Protection",
-    text: "Enterprise role-based access control (RBAC), end-to-end data encryption, API security hardening, and vulnerability mitigation.",
+    text: "Enterprise-grade encryption, zero-trust network protocols, automated vulnerability scanning, and regulatory compliance standards.",
+    points: ["End-to-End Encryption", "Role-Based Access Control", "Security Audit Hardening"],
   },
   {
+    tag: "SRV-07",
     title: "Inventory & ERP Systems",
-    text: "Keep stock accurate and under control, from a single store to a full online portal, with real-time levels, supplier and reorder tracking, and reports tied to sales.",
+    text: "Comprehensive real-time inventory management, multi-warehouse stock sync, automated purchase ordering, and sales reconciliations.",
+    points: ["Multi-Branch Stock Sync", "Automated Purchase Orders", "Real-Time Stock Alerts"],
+  },
+  {
+    tag: "SRV-08",
+    title: "UI/UX & Product Design",
+    text: "Design systems, interactive prototypes, customer journey mapping, and conversion-optimized digital product experiences.",
+    points: ["Figma Design Systems", "Interactive Prototypes", "Conversion UX Audits"],
   },
 ];
 

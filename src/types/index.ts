@@ -34,6 +34,8 @@ export interface ProductItem {
 export interface SecurityItem {
   title: string;
   text: string;
+  tag?: string;
+  points?: string[];
 }
 
 export interface ProcessStep {
