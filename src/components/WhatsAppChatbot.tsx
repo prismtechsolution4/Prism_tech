@@ -144,13 +144,13 @@ export default function FloatingTalk() {
   ];
 
   return (
-    <div className="pointer-events-auto fixed right-4 bottom-4 z-50 md:right-8 md:bottom-8">
+    <div className="pointer-events-auto fixed right-3 bottom-3 z-50 sm:right-6 sm:bottom-6 md:right-8 md:bottom-8">
       {/* Main Floating "Let's talk" Trigger Button */}
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
           aria-label="Let's talk"
-          className="group relative flex items-center gap-2 rounded-full border border-white/20 bg-gradient-to-r from-[#087FF5] to-[#0770db] px-5 py-3 text-sm font-semibold text-white shadow-[0_6px_24px_-2px_rgba(8,127,245,0.55)] transition-all duration-300 hover:scale-105 hover:shadow-[0_8px_32px_rgba(8,127,245,0.75)] hover:brightness-110 focus:outline-none"
+          className="group relative flex items-center gap-2 rounded-full border border-white/20 bg-gradient-to-r from-[#087FF5] to-[#0770db] px-4 py-2.5 sm:px-5 sm:py-3 text-xs sm:text-sm font-semibold text-white shadow-[0_6px_24px_-2px_rgba(8,127,245,0.55)] transition-all duration-300 hover:scale-105 hover:shadow-[0_8px_32px_rgba(8,127,245,0.75)] hover:brightness-110 focus:outline-none"
         >
           {/* Pulsing theme-colored indicator */}
           <span className="absolute -top-1 -right-1 flex h-3.5 w-3.5">
@@ -176,7 +176,7 @@ export default function FloatingTalk() {
 
       {/* Expanded Let's Talk Inquiry Window */}
       {isOpen && (
-        <div className="flex h-[540px] w-[92vw] max-w-[380px] flex-col overflow-hidden rounded-2xl border border-white/15 bg-[#101820] shadow-[0_20px_50px_rgba(0,0,0,0.7)] backdrop-blur-xl animate-[fadeUp_.3s_ease-out]">
+        <div className="flex h-[min(540px,calc(100svh-5rem))] w-[calc(100vw-1.5rem)] sm:w-[360px] max-w-[380px] flex-col overflow-hidden rounded-2xl border border-white/15 bg-[#101820] shadow-[0_20px_50px_rgba(0,0,0,0.7)] backdrop-blur-xl animate-[fadeUp_.3s_ease-out]">
           {/* Header */}
           <div className="flex items-center justify-between border-b border-white/10 bg-gradient-to-r from-[#101820] via-[#15202b] to-[#101820] px-4 py-3.5">
             <div className="flex items-center gap-3">

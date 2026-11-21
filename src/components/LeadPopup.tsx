@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import { contactInterestOptions } from "@/data/content";
+import { company, contactInterestOptions } from "@/data/content";
 
 interface LeadPopupProps {
   isOpen: boolean;
@@ -89,7 +89,7 @@ export default function LeadPopup({
   };
 
   const inputClass =
-    "w-full rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-text outline-none transition placeholder:text-muted focus:border-brand focus:ring-1 focus:ring-brand/40";
+    "w-full rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3 text-base sm:text-sm text-text outline-none transition placeholder:text-muted focus:border-brand focus:ring-1 focus:ring-brand/40";
 
   return (
     <div
@@ -102,7 +102,7 @@ export default function LeadPopup({
         role="dialog"
         aria-modal="true"
         aria-labelledby="lead-title"
-        className="glass relative w-full max-w-md rounded-xl p-7 shadow-popup"
+        className="glass relative w-full max-w-md rounded-xl p-5 sm:p-7 shadow-popup"
       >
         <button
           onClick={onClose}
@@ -126,25 +126,12 @@ export default function LeadPopup({
               Inquiry Sent!
             </p>
             <p className="mt-2 text-muted text-sm leading-relaxed">
-              We&apos;ve dispatched your inquiry to our email and WhatsApp (+92 319 8669833).
+              We&apos;ve dispatched your inquiry to our engineering team at {company.email}. We will reach out shortly.
             </p>
-            {whatsappUrl && (
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-2.5 text-xs font-bold text-white transition hover:brightness-110 shadow-lg"
-              >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.24-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.71 4.3 3.8.6.26 1.07.42 1.44.54.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z" />
-                </svg>
-                <span>WhatsApp</span>
-              </a>
-            )}
-            <div className="mt-4">
+            <div className="mt-5">
               <button
                 onClick={onClose}
-                className="text-xs text-muted hover:text-white underline"
+                className="rounded-full bg-brand px-6 py-2.5 text-xs font-bold text-white transition hover:brightness-110 shadow-[0_0_15px_rgba(8,127,245,0.4)]"
               >
                 Close
               </button>

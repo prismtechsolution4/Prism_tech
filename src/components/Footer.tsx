@@ -10,12 +10,12 @@ export default function Footer() {
   };
 
   return (
-    <footer className="pointer-events-auto relative -mx-5 mt-24 bg-obsidian px-5 md:-mx-10 md:px-10">
+    <footer className="pointer-events-auto relative w-full mt-16 sm:mt-24 bg-obsidian px-4 sm:px-6 md:px-10">
       {/* Top divider gradient from brand to transparent */}
       <div className="h-px w-full bg-gradient-to-r from-transparent via-brand/50 to-transparent" />
 
-      <div className="mx-auto max-w-7xl py-14">
-        <div className="grid gap-12 md:grid-cols-[1.5fr_1fr_1fr_1.3fr]">
+      <div className="mx-auto max-w-7xl py-12 sm:py-14">
+        <div className="grid gap-8 sm:gap-10 md:gap-12 md:grid-cols-[1.5fr_1fr_1fr_1.3fr]">
           {/* Brand Info Column */}
           <div>
             <Image

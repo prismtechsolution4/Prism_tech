@@ -330,7 +330,7 @@ export default function Services3DNetwork({
   }, [activeService, onSelectService]);
 
   return (
-    <div className="relative flex h-[440px] w-full max-w-[560px] items-center justify-center md:h-[520px]">
+    <div className="relative flex h-[320px] sm:h-[420px] md:h-[520px] w-full max-w-[560px] items-center justify-center">
       {/* 3D WebGL Canvas Layer (strictly scoped inside Section 3) */}
       <div
         ref={mountRef}

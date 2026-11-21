@@ -9,7 +9,7 @@ export default function EngagementModels() {
   useVideoVisibility(videoRef);
 
   return (
-    <section id="engagement" className="relative z-10 panel overflow-hidden px-5 py-28 md:px-10 bg-[#101820]">
+    <section id="engagement" className="relative z-10 panel overflow-hidden px-4 sm:px-6 md:px-10 py-20 sm:py-28 bg-[#101820]">
       {/* Ambient Background Layer: Looping Collaboration Video + Blueprints */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
         {/* Looping Team Collaboration & Engineering Video */}
@@ -57,23 +57,23 @@ export default function EngagementModels() {
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-7xl">
-        <p className="eyebrow mb-4" data-reveal="true">
+        <p className="eyebrow mb-3 sm:mb-4 text-[11px] sm:text-xs" data-reveal="true">
           Engagement models
         </p>
         <h2
-          className="font-display max-w-2xl text-4xl font-bold md:text-5xl"
+          className="font-display max-w-2xl text-3xl font-bold sm:text-4xl md:text-5xl text-white tracking-tight"
           data-reveal="true"
         >
           Work with us the way that <span className="text-gradient">fits you</span>
         </h2>
-        <p className="mt-3 text-sm text-[#A0AEC0] max-w-xl leading-relaxed" data-reveal="true">
+        <p className="mt-3 text-xs sm:text-sm text-[#A0AEC0] max-w-xl leading-relaxed" data-reveal="true">
           Choose a fixed-deliverable engagement or dedicated technical resources integrated directly into your engineering roadmap.
         </p>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
+        <div className="mt-8 sm:mt-12 grid gap-6 md:grid-cols-2">
           {engagementModelsData.map((model, idx) => (
             <div key={model.title} data-reveal="true">
-              <div className="spotlight glass pointer-events-auto rounded-2xl h-full p-8 flex flex-col justify-between border border-white/10 bg-[#15202b]/60 backdrop-blur-md shadow-[0_10px_35px_rgba(0,0,0,0.4)] transition-all duration-300 hover:border-[#087FF5]/50 hover:shadow-[0_12px_40px_rgba(8,127,245,0.18)]">
+              <div className="spotlight glass pointer-events-auto rounded-2xl h-full p-5 sm:p-7 md:p-8 flex flex-col justify-between border border-white/10 bg-[#15202b]/60 backdrop-blur-md shadow-[0_10px_35px_rgba(0,0,0,0.4)] transition-all duration-300 hover:border-[#087FF5]/50 hover:shadow-[0_12px_40px_rgba(8,127,245,0.18)]">
                 <div className="relative">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-mono font-semibold tracking-widest uppercase text-[#087FF5] bg-[#087FF5]/10 px-3 py-1 rounded-full border border-[#087FF5]/20">

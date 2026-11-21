@@ -143,7 +143,7 @@ function CountUpCard({
 
   return (
     <div data-reveal="true" ref={cardRef}>
-      <div className="group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-[#16202b]/90 to-[#101820]/95 p-6 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-brand/50 hover:shadow-[0_16px_36px_-10px_rgba(0,0,0,0.6),0_0_24px_-4px_rgba(8,127,245,0.3)]">
+      <div className="group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-[#16202b]/90 to-[#101820]/95 p-3.5 sm:p-5 md:p-6 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1.5 hover:border-brand/50 hover:shadow-[0_16px_36px_-10px_rgba(0,0,0,0.6),0_0_24px_-4px_rgba(8,127,245,0.3)]">
         {/* Top subtle specular highlight */}
         <div className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-cyan/60 to-transparent opacity-60 transition-all duration-300 group-hover:inset-x-3 group-hover:opacity-100" />
 
@@ -152,28 +152,28 @@ function CountUpCard({
 
         <div className="relative z-10">
           <div className="flex items-center justify-between">
-            <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-brand/25 bg-brand/10 text-brand shadow-inner transition-transform duration-300 group-hover:scale-110">
+            <div className="inline-flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-lg border border-brand/25 bg-brand/10 text-brand shadow-inner transition-transform duration-300 group-hover:scale-110">
               <StatIcon index={index} />
             </div>
 
             {/* Live pulsing radar tag for 24/7 Security */}
             {isCustomDisplay && (
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-cyan/30 bg-cyan/10 px-2.5 py-0.5 text-[11px] font-semibold text-cyan">
-                <span className="relative flex h-2 w-2">
+              <span className="inline-flex items-center gap-1 sm:gap-1.5 rounded-full border border-cyan/30 bg-cyan/10 px-2 sm:px-2.5 py-0.5 text-[10px] sm:text-[11px] font-semibold text-cyan">
+                <span className="relative flex h-1.5 w-1.5 sm:h-2 sm:w-2">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan opacity-75" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-cyan" />
+                  <span className="relative inline-flex h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-cyan" />
                 </span>
                 LIVE
               </span>
             )}
           </div>
 
-          <div className="font-display mt-5 text-4xl font-bold tracking-tight text-brand md:text-5xl">
+          <div className="font-display mt-3 sm:mt-5 text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight text-brand">
             <span>{count}</span>
             {isCustomDisplay && displayValue}
           </div>
 
-          <p className="mt-2 text-sm font-medium text-muted transition-colors group-hover:text-text-secondary">
+          <p className="mt-1.5 sm:mt-2 text-xs sm:text-sm font-medium text-muted transition-colors group-hover:text-text-secondary leading-snug">
             {label}
           </p>
         </div>
@@ -334,7 +334,7 @@ function CyberBackgroundCanvas() {
 
 export default function WhyPrismTech() {
   return (
-    <section id="intro" className="relative z-10 flex min-h-[90vh] flex-col justify-center gap-16 overflow-hidden py-24 bg-[#101820]">
+    <section id="intro" className="relative z-10 flex min-h-[80vh] flex-col justify-center gap-10 sm:gap-16 overflow-hidden py-16 sm:py-24 bg-[#101820]">
       {/* Dynamic Background Animation: Cyber Aurora + Perspective Grid + Particles */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
         {/* Subtle Perspective Cyber Grid */}
@@ -355,19 +355,19 @@ export default function WhyPrismTech() {
       </div>
 
       {/* Why PrismTech content & stats */}
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-5 md:px-10">
-        <p className="eyebrow mb-4" data-reveal="true">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-10">
+        <p className="eyebrow mb-3 sm:mb-4 text-[11px] sm:text-xs" data-reveal="true">
           Why PrismTech
         </p>
         <h2
-          className="font-display max-w-3xl text-3xl font-bold tracking-tight md:text-5xl"
+          className="font-display max-w-3xl text-2xl sm:text-3xl font-bold tracking-tight md:text-5xl text-white"
           data-reveal="true"
         >
           One partner for software, AI{" "}
-          <span className="text-gradient">and security</span>
+          <span className="text-gradient">and enterprise scale</span>
         </h2>
 
-        <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
+        <div className="mt-8 sm:mt-12 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4 md:gap-6">
           {statsData.map((stat, idx) => (
             <CountUpCard
               key={stat.label}

@@ -254,34 +254,34 @@ function InteractiveTechCard({
         <div className="pointer-events-none absolute -bottom-10 left-1/2 h-20 w-44 -translate-x-1/2 rounded-full bg-brand/20 blur-2xl transition-opacity duration-300 opacity-0 group-hover:opacity-100" />
 
         <div className="relative z-10">
-          <h3 className="font-display text-xl font-semibold tracking-tight text-white transition-colors group-hover:text-white">
+          <h3 className="font-display text-lg sm:text-xl font-semibold tracking-tight text-white transition-colors group-hover:text-white">
             {category.title}
           </h3>
-          <p className="mt-2 text-sm text-muted leading-relaxed">
+          <p className="mt-1.5 sm:mt-2 text-xs sm:text-sm text-muted leading-relaxed">
             {category.description}
           </p>
 
-          <ul className="mt-7 grid grid-cols-2 gap-3">
+          <ul className="mt-5 sm:mt-7 grid grid-cols-2 gap-2 sm:gap-3">
             {category.items.map((tech) => (
               <li
                 key={tech.name}
-                className="group/item relative flex items-center gap-3 overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] px-3.5 py-3 text-sm text-white/90 transition-all duration-300 hover:-translate-y-1 hover:border-brand/70 hover:bg-brand/[0.08] hover:shadow-[0_4px_16px_-2px_rgba(8,127,245,0.3)]"
+                className="group/item relative flex items-center gap-2 sm:gap-3 overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] px-2.5 py-2 sm:px-3.5 sm:py-2.5 text-xs sm:text-sm text-white/90 transition-all duration-300 hover:-translate-y-1 hover:border-brand/70 hover:bg-brand/[0.08] hover:shadow-[0_4px_16px_-2px_rgba(8,127,245,0.3)]"
               >
                 {/* Micro Hover Gradient Wave */}
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-brand/15 to-transparent opacity-0 transition-opacity duration-300 group-hover/item:opacity-100" />
 
                 {/* Tech Icon Container with Scale & Glow */}
-                <div className="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-black/40 p-1 transition-all duration-300 group-hover/item:scale-110 group-hover/item:border-brand/60 group-hover/item:shadow-[0_0_12px_rgba(8,127,245,0.45)]">
+                <div className="relative flex h-7 w-7 sm:h-8 sm:w-8 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-black/40 p-1 transition-all duration-300 group-hover/item:scale-110 group-hover/item:border-brand/60 group-hover/item:shadow-[0_0_12px_rgba(8,127,245,0.45)]">
                   <Image
                     src={tech.icon}
                     alt={tech.name}
                     width={26}
                     height={26}
-                    className="h-6 w-6 object-contain transition-transform duration-300"
+                    className="h-5 w-5 sm:h-6 sm:w-6 object-contain transition-transform duration-300"
                   />
                 </div>
 
-                <span className="relative z-10 font-medium tracking-wide transition-colors duration-200 group-hover/item:text-white">
+                <span className="relative z-10 font-medium tracking-tight sm:tracking-wide transition-colors duration-200 group-hover/item:text-white truncate">
                   {tech.name}
                 </span>
               </li>
@@ -298,7 +298,7 @@ export default function TechStack() {
   useVideoVisibility(videoRef);
 
   return (
-    <section id="tech" className="relative z-10 overflow-hidden px-5 py-28 md:px-10 bg-[#101820]">
+    <section id="tech" className="relative z-10 overflow-hidden px-4 sm:px-6 md:px-10 py-20 sm:py-28 bg-[#101820]">
       {/* ------------------------------------------------------------- */}
       {/* SOPHISTICATED FUTURISTIC TECHNOLOGY ENVIRONMENT BACKGROUND     */}
       {/* ------------------------------------------------------------- */}
@@ -336,16 +336,16 @@ export default function TechStack() {
       {/* SECTION CONTENT                                               */}
       {/* ------------------------------------------------------------- */}
       <div className="relative z-10 mx-auto w-full max-w-7xl">
-        <p className="eyebrow mb-4" data-reveal="true">
+        <p className="eyebrow mb-3 sm:mb-4 text-[11px] sm:text-xs" data-reveal="true">
           Tech stack
         </p>
         <h2
-          className="font-display max-w-2xl text-4xl font-bold tracking-tight md:text-5xl"
+          className="font-display max-w-2xl text-3xl font-bold sm:text-4xl md:text-5xl tracking-tight text-white"
           data-reveal="true"
         >
           The right tools for <span className="text-gradient">every build</span>
         </h2>
-        <p className="mt-4 max-w-xl text-muted leading-relaxed" data-reveal="true">
+        <p className="mt-3 sm:mt-4 max-w-xl text-xs sm:text-sm text-muted leading-relaxed" data-reveal="true">
           Our team works across modern web, backend and mobile technologies, so
           we choose what fits your product, not what fits our habits.
         </p>

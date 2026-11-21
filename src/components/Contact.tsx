@@ -63,7 +63,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative z-10 overflow-hidden flex min-h-screen flex-col justify-between px-5 pt-32 md:px-10 bg-[#101820]"
+      className="relative z-10 overflow-hidden flex min-h-screen flex-col justify-between px-4 sm:px-6 md:px-10 pt-20 sm:pt-28 md:pt-32 pb-16 sm:pb-24 bg-[#101820]"
     >
       {/* Ambient Tech Background Layer */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
@@ -99,7 +99,7 @@ export default function Contact() {
             Book a Free Consultation
           </p>
           <h2
-            className="font-display text-4xl font-bold md:text-5xl"
+            className="font-display text-3xl sm:text-4xl md:text-5xl font-bold"
             data-reveal="true"
           >
             Let&apos;s <span className="text-gradient">talk.</span>
@@ -161,7 +161,7 @@ export default function Contact() {
           ref={formRef}
           onSubmit={handleSubmit}
           noValidate
-          className="glass pointer-events-auto space-y-4 rounded-2xl p-6 md:p-8"
+          className="glass pointer-events-auto space-y-4 rounded-2xl p-4 sm:p-6 md:p-8"
           data-reveal="true"
         >
           {/* Honeypot field for bot protection */}

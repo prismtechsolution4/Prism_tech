@@ -103,7 +103,7 @@ export default function Products() {
   // const whatsappUrl = ...
 
   return (
-    <section id="products" className="relative z-10 overflow-hidden px-5 py-28 md:px-10 bg-[#101820]">
+    <section id="products" className="relative z-10 overflow-hidden px-4 sm:px-6 md:px-10 py-20 sm:py-28 bg-[#101820]">
       {/* ------------------------------------------------------------- */}
       {/* AMBIENT TECH BACKGROUND: VIDEO + ELECTRIC BLUE AURORA + GRID */}
       {/* ------------------------------------------------------------- */}
@@ -207,7 +207,7 @@ export default function Products() {
         {/* MAIN PRODUCT SHOWCASE CONSOLE (12-COL DUAL PANE)              */}
         {/* ------------------------------------------------------------- */}
         <div
-          className="mt-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center rounded-3xl border border-white/10 bg-[#121c27]/75 p-6 md:p-8 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.6)]"
+          className="mt-6 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center rounded-2xl md:rounded-3xl border border-white/10 bg-[#121c27]/75 p-4 sm:p-6 md:p-8 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.6)]"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
@@ -216,19 +216,19 @@ export default function Products() {
           {/* ----------------------------------------------------------- */}
           <div className="lg:col-span-7 flex flex-col gap-4">
             {/* Device Frame Window */}
-            <div className="relative overflow-hidden rounded-2xl border border-white/15 bg-[#090f17] shadow-[0_16px_40px_rgba(0,0,0,0.8),inset_0_1px_1px_rgba(255,255,255,0.15)]">
+            <div className="relative overflow-hidden rounded-xl sm:rounded-2xl border border-white/15 bg-[#090f17] shadow-[0_16px_40px_rgba(0,0,0,0.8),inset_0_1px_1px_rgba(255,255,255,0.15)]">
               {/* Studio Display Bezel Header */}
-              <div className="flex items-center justify-between border-b border-white/10 bg-[#0d1622] px-4 py-2.5">
-                <div className="flex items-center gap-2">
-                  <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
-                  <span className="ml-2 font-mono text-[11px] text-[#94A3B8] tracking-wider">
+              <div className="flex items-center justify-between border-b border-white/10 bg-[#0d1622] px-3 sm:px-4 py-2 sm:py-2.5">
+                <div className="flex items-center gap-1.5 sm:gap-2">
+                  <span className="h-2 w-2 sm:h-2.5 sm:w-2.5 rounded-full bg-white/20" />
+                  <span className="h-2 w-2 sm:h-2.5 sm:w-2.5 rounded-full bg-white/20" />
+                  <span className="h-2 w-2 sm:h-2.5 sm:w-2.5 rounded-full bg-white/20" />
+                  <span className="ml-1.5 sm:ml-2 font-mono text-[10px] sm:text-[11px] text-[#94A3B8] tracking-wider">
                     {product.id.toUpperCase()}://v3.4-live
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-[10px] font-mono uppercase tracking-widest text-[#087FF5] bg-[#087FF5]/10 px-2 py-0.5 rounded border border-[#087FF5]/25">
+                  <span className="text-[9px] sm:text-[10px] font-mono uppercase tracking-widest text-[#087FF5] bg-[#087FF5]/10 px-2 py-0.5 rounded border border-[#087FF5]/25">
                     Cloud Node
                   </span>
                 </div>
@@ -257,9 +257,9 @@ export default function Products() {
                 ))}
 
                 {/* Floating Interactive Telemetry Badge */}
-                <div className="absolute top-4 right-4 z-20 flex items-center gap-2 rounded-lg border border-white/15 bg-[#101820]/90 px-3 py-1.5 backdrop-blur-md shadow-lg">
-                  <span className="h-2 w-2 rounded-full bg-[#087FF5] shadow-[0_0_8px_#087FF5]" />
-                  <span className="font-mono text-xs font-semibold text-white">
+                <div className="absolute top-2.5 right-2.5 sm:top-4 sm:right-4 z-20 flex items-center gap-1.5 sm:gap-2 rounded-lg border border-white/15 bg-[#101820]/90 px-2.5 py-1 sm:px-3 sm:py-1.5 backdrop-blur-md shadow-lg">
+                  <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-[#087FF5] shadow-[0_0_8px_#087FF5]" />
+                  <span className="font-mono text-[10px] sm:text-xs font-semibold text-white">
                     {product.name} Live
                   </span>
                 </div>
@@ -267,13 +267,13 @@ export default function Products() {
 
               {/* Bottom Live Metrics Bar inside Device Frame */}
               {product.metrics && (
-                <div className="grid grid-cols-3 divide-x divide-white/10 border-t border-white/10 bg-[#0d1622]/90 px-2 py-3 text-center">
+                <div className="grid grid-cols-3 divide-x divide-white/10 border-t border-white/10 bg-[#0d1622]/90 px-1 sm:px-2 py-2 sm:py-3 text-center">
                   {product.metrics.map((metric, mIdx) => (
-                    <div key={mIdx} className="px-2">
-                      <div className="font-display text-base md:text-lg font-bold text-white tracking-tight">
+                    <div key={mIdx} className="px-1 sm:px-2">
+                      <div className="font-display text-sm sm:text-base md:text-lg font-bold text-white tracking-tight">
                         {metric.value}
                       </div>
-                      <div className="text-[10px] md:text-xs text-[#94A3B8] uppercase font-mono tracking-wider mt-0.5">
+                      <div className="text-[9px] sm:text-[10px] md:text-xs text-[#94A3B8] uppercase font-mono tracking-wider mt-0.5 leading-tight">
                         {metric.label}
                       </div>
                     </div>
@@ -340,11 +340,11 @@ export default function Products() {
               </div>
 
               {/* Product Headline & Title */}
-              <h3 className="font-display mt-2 text-3xl md:text-4xl font-bold text-white tracking-tight">
+              <h3 className="font-display mt-2 text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight">
                 {product.name}
               </h3>
 
-              <p className="mt-3 text-sm text-[#CBD5E1] leading-relaxed">
+              <p className="mt-2.5 sm:mt-3 text-xs sm:text-sm text-[#CBD5E1] leading-relaxed">
                 {product.blurb}
               </p>
 

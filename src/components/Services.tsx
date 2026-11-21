@@ -28,7 +28,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="relative z-10 flex min-h-screen items-center px-5 pt-28 pb-20 md:px-10 bg-[#101820] overflow-hidden"
+      className="relative z-10 flex min-h-screen items-center px-4 sm:px-6 md:px-10 pt-20 sm:pt-28 pb-16 sm:pb-20 bg-[#101820] overflow-hidden"
     >
       {/* Ambient background glow strictly within Services */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
@@ -36,24 +36,24 @@ export default function Services() {
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-7xl">
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-16">
           {/* Left Column: Heading & Accordion List */}
           <div>
-            <p className="eyebrow mb-4" data-reveal="true">
+            <p className="eyebrow mb-3 sm:mb-4 text-[11px] sm:text-xs" data-reveal="true">
               What we do
             </p>
             <h2
-              className="font-display max-w-md text-4xl font-bold md:text-5xl"
+              className="font-display max-w-md text-3xl font-bold sm:text-4xl md:text-5xl text-white tracking-tight"
               data-reveal="true"
             >
               One team, <span className="text-gradient">many capabilities</span>
             </h2>
-            <p className="mt-4 max-w-sm text-sm text-muted" data-reveal="true">
+            <p className="mt-3 sm:mt-4 max-w-sm text-xs sm:text-sm text-muted" data-reveal="true">
               Choose a service, or click a 3D node in the planetary network.
             </p>
 
             <ul
-              className="pointer-events-auto mt-8 border-t border-white/10"
+              className="pointer-events-auto mt-6 sm:mt-8 border-t border-white/10"
               data-reveal="true"
             >
               {servicesData.map((srv, idx) => {
@@ -63,17 +63,17 @@ export default function Services() {
                     <button
                       onClick={() => handleSelectService(idx)}
                       aria-expanded={isActive}
-                      className="group flex w-full items-center gap-4 py-3.5 text-left focus:outline-none"
+                      className="group flex w-full items-center gap-3 sm:gap-4 py-3 sm:py-3.5 text-left focus:outline-none"
                     >
                       <span
-                        className={`font-display w-7 text-xs tracking-widest transition-colors ${
-                          isActive ? "text-brand" : "text-muted"
+                        className={`font-display w-6 sm:w-7 text-[11px] sm:text-xs tracking-widest transition-colors ${
+                          isActive ? "text-brand font-bold" : "text-muted"
                         }`}
                       >
                         {srv.number}
                       </span>
                       <span
-                        className={`font-display flex-1 text-lg transition-colors ${
+                        className={`font-display flex-1 text-base sm:text-lg transition-colors ${
                           isActive
                             ? "font-semibold text-white"
                             : "text-white/65 group-hover:text-white"
@@ -82,7 +82,7 @@ export default function Services() {
                         {srv.title}
                       </span>
                       <span
-                        className={`text-brand transition-transform duration-300 ${
+                        className={`text-brand text-sm transition-transform duration-300 ${
                           isActive ? "rotate-90" : ""
                         }`}
                         aria-hidden="true"
@@ -99,9 +99,9 @@ export default function Services() {
                       }`}
                       aria-live="polite"
                     >
-                      <div className="overflow-hidden pl-11">
-                        <p className="text-sm text-muted">{srv.blurb}</p>
-                        <ul className="mt-3 space-y-1.5 text-xs text-white/75">
+                      <div className="overflow-hidden pl-7 sm:pl-11">
+                        <p className="text-xs sm:text-sm text-muted">{srv.blurb}</p>
+                        <ul className="mt-2.5 sm:mt-3 space-y-1.5 text-xs text-white/75">
                           {srv.points.map((point) => (
                             <li key={point} className="flex items-center gap-2">
                               <span
@@ -114,7 +114,7 @@ export default function Services() {
                         </ul>
                         <button
                           onClick={() => scrollToSection("contact", srv.title)}
-                          className="pointer-events-auto mt-4 text-sm font-semibold text-brand transition hover:translate-x-0.5 hover:brightness-125 focus:outline-none"
+                          className="pointer-events-auto mt-3 sm:mt-4 text-xs sm:text-sm font-semibold text-brand transition hover:translate-x-0.5 hover:brightness-125 focus:outline-none"
                         >
                           Enquire about {srv.title} →
                         </button>

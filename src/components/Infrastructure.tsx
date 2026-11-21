@@ -97,7 +97,7 @@ export default function Infrastructure() {
   return (
     <section
       id="security"
-      className="relative z-10 overflow-hidden flex min-h-screen flex-col justify-center px-5 pt-32 pb-24 md:px-10 bg-[#101820]"
+      className="relative z-10 overflow-hidden flex min-h-screen flex-col justify-center px-4 sm:px-6 md:px-10 pt-20 sm:pt-32 pb-16 sm:pb-24 bg-[#101820]"
     >
       {/* Ambient Tech Background Layer */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
@@ -139,17 +139,17 @@ export default function Infrastructure() {
         {/* Section Header with Carousel Navigation Arrows */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div>
-            <p className="eyebrow mb-3" data-reveal="true">
+            <p className="eyebrow mb-2 sm:mb-3 text-[11px] sm:text-xs" data-reveal="true">
               Enterprise Services & Solutions
             </p>
             <h2
-              className="font-display max-w-2xl text-3xl font-bold md:text-5xl text-white tracking-tight"
+              className="font-display max-w-2xl text-2xl sm:text-3xl font-bold md:text-5xl text-white tracking-tight"
               data-reveal="true"
             >
               Engineered for scale,{" "}
               <span className="text-gradient">crafted for impact</span>
             </h2>
-            <p className="mt-3 text-sm text-[#A0AEC0] max-w-xl leading-relaxed" data-reveal="true">
+            <p className="mt-2.5 sm:mt-3 text-xs sm:text-sm text-[#A0AEC0] max-w-xl leading-relaxed" data-reveal="true">
               Explore our core capabilities across software development, AI automation, cloud infrastructure, and enterprise architecture.
             </p>
           </div>
@@ -203,10 +203,10 @@ export default function Infrastructure() {
               <div
                 key={item.title}
                 data-card-index={idx}
-                className="snap-start shrink-0 w-[300px] sm:w-[350px] md:w-[380px]"
+                className="snap-start shrink-0 w-[84vw] sm:w-[350px] md:w-[380px] max-w-[380px]"
               >
                 <div
-                  className={`group relative flex h-full flex-col justify-between rounded-2xl border p-7 backdrop-blur-xl transition-all duration-300 ${
+                  className={`group relative flex h-full flex-col justify-between rounded-2xl border p-5 sm:p-7 backdrop-blur-xl transition-all duration-300 ${
                     isCurrent
                       ? "border-[#087FF5]/70 bg-[#162434]/85 shadow-[0_16px_40px_rgba(8,127,245,0.22)] scale-[1.02]"
                       : "border-white/10 bg-[#121c27]/70 hover:border-white/25 hover:bg-[#152230]/85"
