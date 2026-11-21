@@ -234,8 +234,8 @@ export default function Products() {
                 </div>
               </div>
 
-              {/* Main Screen Preview — Crops out outer background/green desk elements */}
-              <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#070c14]">
+              {/* Main Screen Preview — Exact 1376x768 SaaS Dashboard Ratio */}
+              <div className="relative aspect-[1376/768] w-full overflow-hidden bg-[#070c14]">
                 {product.gallery.map((imgSrc, idx) => (
                   <div
                     key={`${product.id}-${imgSrc}-${idx}`}
@@ -249,7 +249,7 @@ export default function Products() {
                       fill
                       sizes="(min-width: 1024px) 680px, 95vw"
                       priority={idx === 0}
-                      className="object-cover object-top transition-transform duration-700 hover:scale-[1.02]"
+                      className="object-cover object-left-top transition-transform duration-700 hover:scale-[1.01]"
                     />
                     {/* Subtle bottom vignette to blend into bezel footer */}
                     <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#070c14]/50 via-transparent to-transparent" />
