@@ -17,14 +17,14 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "PrismTech Solutions (PVT) LTD — Intelligence + Technology",
   description:
-    "Consultancy, software development (mobile, web, desktop), custom AI, HRMS, POS, Reward App, CRM, and remote security monitoring.",
+    "Consultancy, custom software development (mobile, web, desktop), custom AI, HRMS, POS, Reward App, CRM, and cloud enterprise solutions.",
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
     title: "PrismTech Solutions (PVT) LTD — Intelligence + Technology",
     description:
-      "Consultancy, software development (mobile, web, desktop), custom AI, HRMS, POS, Reward App, CRM, and remote security monitoring.",
+      "Consultancy, custom software development (mobile, web, desktop), custom AI, HRMS, POS, Reward App, CRM, and cloud enterprise solutions.",
     url: "https://prismtechsolutions.com",
     siteName: "PrismTech Solutions (PVT) LTD",
     locale: "en_US",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "PrismTech Solutions (PVT) LTD — Intelligence + Technology",
     description:
-      "Consultancy, software development (mobile, web, desktop), custom AI, HRMS, POS, Reward App, CRM, and remote security monitoring.",
+      "Consultancy, custom software development (mobile, web, desktop), custom AI, HRMS, POS, Reward App, CRM, and cloud enterprise solutions.",
   },
 };
 

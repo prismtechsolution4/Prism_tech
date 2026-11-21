@@ -47,17 +47,17 @@ export default function Infrastructure() {
 
       <div className="relative z-10 mx-auto w-full max-w-7xl">
         <p className="eyebrow mb-4" data-reveal="true">
-          Infrastructure services
+          Enterprise Infrastructure
         </p>
         <h2
           className="font-display max-w-2xl text-4xl font-bold md:text-5xl"
           data-reveal="true"
         >
-          Always watching,{" "}
-          <span className="text-gradient">so you don&apos;t have to</span>
+          Engineered for scale,{" "}
+          <span className="text-gradient">secured at every layer</span>
         </h2>
         <p className="mt-3 text-sm text-[#A0AEC0] max-w-xl leading-relaxed" data-reveal="true">
-          24/7 CCTV surveillance, smart cloud cameras, and enterprise remote security operations ensuring round-the-clock protection.
+          High-availability cloud architecture, robust cybersecurity, and enterprise systems engineered for zero downtime.
         </p>
 
         <div className="mt-10 grid max-w-5xl gap-5 md:grid-cols-3">

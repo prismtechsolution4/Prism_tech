@@ -86,7 +86,7 @@ export default function Navbar() {
               width={640}
               height={160}
               priority
-              className="relative h-10 w-auto md:h-12 transition-all duration-300 group-hover:brightness-110"
+              className="relative h-12 w-auto sm:h-14 md:h-15 lg:h-16 transition-all duration-300 group-hover:brightness-110 drop-shadow-[0_2px_12px_rgba(8,127,245,0.25)]"
             />
           </div>
         </motion.button>

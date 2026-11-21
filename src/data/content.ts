@@ -11,15 +11,15 @@ import {
 } from "@/types";
 
 export const company: CompanyInfo = {
-  name: "IntechTive Solutions (PVT) LTD",
-  tagline: "Software, AI and security systems that help businesses run smarter, faster and safer.",
-  email: "info@intechtivesolutions.com",
+  name: "PrismTech Solutions (PVT) LTD",
+  tagline: "Software, AI and enterprise digital systems that help businesses run smarter, faster and scale.",
+  email: "info@prismtechsolutions.com",
   phone: "+92 319 8669833",
   whatsappNumber: "03198669833",
   whatsapp: "https://wa.me/923198669833",
-  address: "PLOT WSA 1 FB Area Block 1",
-  instagram: "https://instagram.com/intechtive.solutions",
-  instagramHandle: "@intechtive.solutions",
+  address: "",
+  instagram: "",
+  instagramHandle: "",
 };
 
 export const navLinks = [
@@ -37,14 +37,14 @@ export const marqueeItems = [
   "Desktop Software",
   "Custom AI Projects",
   "Social Media Marketing",
-  "Inventory Management",
+  "Cloud Infrastructure",
   "HRMS",
   "POS",
   "Reward App",
   "CRM",
   "E-commerce",
-  "Remote Monitoring",
-  "Camera Installation",
+  "DevOps & CI/CD",
+  "Enterprise Architecture",
 ];
 
 export const statsData: StatItem[] = [
@@ -64,7 +64,7 @@ export const statsData: StatItem[] = [
     target: 24,
     isCustomDisplay: true,
     displayValue: "/7",
-    label: "Remote security monitoring",
+    label: "DevOps & cloud support",
   },
 ];
 
@@ -318,15 +318,15 @@ export const engagementModelsData: EngagementModel[] = [
 
 export const securityServicesData: SecurityItem[] = [
   {
-    title: "Remote Security Monitoring",
-    text: "24/7 surveillance from a central watchtower with live feeds, motion alerts and incident reporting.",
+    title: "Cloud & DevOps Infrastructure",
+    text: "High-availability cloud architecture, automated CI/CD deployment pipelines, containerization, and zero-downtime microservice orchestration.",
   },
   {
-    title: "Camera Installation",
-    text: "Site surveys, CCTV and IP-camera installation, cabling and maintenance, ready to be monitored remotely.",
+    title: "Cybersecurity & Data Protection",
+    text: "Enterprise role-based access control (RBAC), end-to-end data encryption, API security hardening, and vulnerability mitigation.",
   },
   {
-    title: "Inventory Management",
+    title: "Inventory & ERP Systems",
     text: "Keep stock accurate and under control, from a single store to a full online portal, with real-time levels, supplier and reorder tracking, and reports tied to sales.",
   },
 ];
@@ -334,15 +334,15 @@ export const securityServicesData: SecurityItem[] = [
 export const faqsData: FAQItem[] = [
   {
     q: "What does PrismTech Solutions do?",
-    a: "We provide consultancy, custom software development (mobile, web and desktop), custom AI projects, social media marketing, inventory management, ready-made products (HRMS, POS, Reward App, CRM and an E-commerce platform), and remote security monitoring with camera installation.",
+    a: "We provide consultancy, custom software development (mobile, web and desktop), custom AI projects, social media marketing, inventory & ERP management, ready-made products (HRMS, POS, Reward App, CRM, and an E-commerce platform), and cloud infrastructure management.",
   },
   {
     q: "Do you build custom software or only sell ready-made products?",
     a: "Both. Our products can be deployed and tailored to your business, and if you need something unique we design and build it from scratch.",
   },
   {
-    q: "How does remote security monitoring work?",
-    a: "We install or connect your cameras, then monitor the feeds remotely from a central location, with alerts and incident reporting so issues are handled quickly.",
+    q: "How do you ensure software security and cloud reliability?",
+    a: "We architect all systems with enterprise-grade security, end-to-end data encryption, automated CI/CD deployment pipelines, and high-availability cloud hosting with 99.9% uptime.",
   },
   {
     q: "How do we get started?",
@@ -364,8 +364,8 @@ export const contactInterestOptions = [
   "Reward App",
   "CRM",
   "E-commerce Platform",
-  "Remote Security Monitoring",
-  "Camera Installation",
+  "Cloud & DevOps Infrastructure",
+  "Cybersecurity & Data Protection",
   "Inventory Management",
   "Something else",
 ];
